@@ -5258,7 +5258,7 @@
       "width": 72,
       "height": 44,
       "primary_tileset": "gTileset_Johto_General",
-      "secondary_tileset": "gTileset_Lavaridge",
+      "secondary_tileset": "gTileset_Lavaridge2",
       "border_filepath": "data/layouts/CinnabarIsland/border.bin",
       "blockdata_filepath": "data/layouts/CinnabarIsland/map.bin"
     },

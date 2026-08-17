@@ -19,7 +19,7 @@ EcruteakCity_Theater_OnTransition::
 
 EcruteakCity_Theater_MapScript_SetRocketSceneActive::
 	setobjectxyperm LOCALID_ECRUTEAK_ZUKI, 10, 2
-	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_TOWER_BEAM
+	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_FACE_UP
 	return
 
 EcruteakCity_Theater_MapScript_SetKimonoMovement::
@@ -55,7 +55,7 @@ EcruteakCity_Theater_EventScript_RocketEventTrigger::
 	applymovement OBJ_EVENT_ID_CAMERA, EcruteakCity_Theater_Movement_CameraPanDown
 	waitmovement 0
 	special RemoveCameraObject
-	setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_TOWER_BEAM
+	@setobjectmovementtype LOCALID_ECRUTEAK_ROCKET, MOVEMENT_TYPE_FACE_UP
 	setobjectxyperm LOCALID_ECRUTEAK_ZUKI, 10, 2
 	setvar VAR_ECRUTEAK_CITY_THEATER, 1
 	releaseall
@@ -139,8 +139,10 @@ EcruteakCity_Theater_Text_Rocket3:
 EcruteakCity_Theater_EventScript_Rocket::
 	lock
 	faceplayer
-	msgbox EcruteakCity_Theater_Text_RocketSeen, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_33, EcruteakCity_Theater_Text_RocketBeaten
+	trainerbattle_single TRAINER_GRUNT_33, EcruteakCity_Theater_Text_RocketSeen, EcruteakCity_Theater_Text_RocketBeaten, EcruteakCity_Theater_EventScript_RocketPostBattle
+	end
+
+EcruteakCity_Theater_EventScript_RocketPostBattle::
 	msgbox EcruteakCity_Theater_Text_RocketAfter, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ECRUTEAK_ROCKET, EcruteakCity_Theater_Movement_RocketLeave
@@ -193,8 +195,7 @@ EcruteakCity_Theater_Text_RocketSeen:
 
 EcruteakCity_Theater_Text_RocketBeaten:
 	.string "Oh, no!\n"
-	.string "You make me look like a\l"
-	.string "villain!$"
+	.string "You make me look like a villain!$"
 
 EcruteakCity_Theater_Text_RocketAfter:
 	.string "Oops! I have an important mission!\n"

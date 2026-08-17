@@ -2065,3 +2065,14 @@ const struct Tileset gTileset_General_Frontier_West =
     .metatileAttributes = gMetatileAttributes_General_Frontier_West,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_Lavaridge2 =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_Lavaridge2,
+    .palettes = gTilesetPalettes_Lavaridge2,
+    .metatiles = gMetatiles_Lavaridge2,
+    .metatileAttributes = gMetatileAttributes_Lavaridge2,
+    .callback = InitTilesetAnim_Lavaridge,
+};

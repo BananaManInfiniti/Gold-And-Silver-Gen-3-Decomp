@@ -121,6 +121,7 @@ const u16 gBattleEnvironmentPalette_StadiumKoga_2[] = INCGFX_U16("graphics/battl
 const u16 gBattleEnvironmentPalette_StadiumBruno_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette5.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumKaren_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette6.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_StadiumLance_2[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette7.pal", ".gbapal");
+const u16 gBattleEnvironmentPalette_StadiumLeader[] = INCGFX_U16("graphics/battle_environment/stadium_2/palette8.pal", ".gbapal");
 
 const u16 gBattleEnvironmentPalette_Rayquaza_2[] = INCGFX_U16("graphics/battle_environment/sky_2/palette.pal", ".gbapal");
 const u16 gBattleEnvironmentPalette_Rayquaza_2_Night[] = INCGFX_U16("graphics/battle_environment/sky_2/palette_night.pal", ".gbapal");

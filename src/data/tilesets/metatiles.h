@@ -525,3 +525,6 @@ const u16 gMetatileAttributes_SootopolisGym_2[] = INCBIN_U16("data/tilesets/seco
 
 const u16 gMetatiles_BattleFrontier_2[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_2/metatiles.bin");
 const u16 gMetatileAttributes_BattleFrontier_2[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_2/metatile_attributes.bin");
+
+const u16 gMetatiles_Lavaridge2[] = INCBIN_U16("data/tilesets/secondary/lavaridge2/metatiles.bin");
+const u16 gMetatileAttributes_Lavaridge2[] = INCBIN_U16("data/tilesets/secondary/lavaridge2/metatile_attributes.bin");

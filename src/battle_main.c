@@ -347,7 +347,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_DRAGON_TAMER] = { _("Dragon Tamer"), 12 },
     [TRAINER_CLASS_NINJA_BOY] = { _("Ninja Boy"), 3 },
     [TRAINER_CLASS_BATTLE_GIRL] = { _("Battle Girl"), 6 },
-    [TRAINER_CLASS_PARASOL_LADY] = { ("Swimmer♀"), 2, BALL_DIVE },
+    [TRAINER_CLASS_PARASOL_LADY] = { ("Parasol Lady"), 2, BALL_DIVE },
     [TRAINER_CLASS_TWINS] = { _("Twins"), 3 },
     [TRAINER_CLASS_SAILOR] = { _("Sailor"), 8 },
     [TRAINER_CLASS_COOLTRAINER_2] = { _("Cooltrainer"), 5, BALL_ULTRA },
@@ -1980,17 +1980,18 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
                 {
                     species = GetSpeciesRandomSeeded(partyData[i].species, TX_RANDOM_T_TRAINER, 0);
                     CreateMon(&party[i], species, GetScaledLevel(partyData[i].lvl), personalityValue, otId);
-                    DebugPrintf("Random, chaotic trainers");
+                    //DebugPrintf("Random, chaotic trainers");
                 }
             else if (gSaveBlock1Ptr->tx_Random_Trainer) //tx_randomizer_and_challenges
                 {
                     species = GetSpeciesRandomSeeded(partyData[i].species, TX_RANDOM_T_TRAINER, 0);
                     CreateMon(&party[i], species, GetScaledLevel(partyData[i].lvl), personalityValue, otId);
-                    DebugPrintf("Random trainers");
+                    //DebugPrintf("Random trainers");
                 }
             else
             {
-                DebugPrintf("Trainers not randomized.");
+                //DebugPrintf("Trainers not randomized.");
+                //CreateMon(&party[i], partyData[monIndex].species, partyData[monIndex].lvl, personalityValue, otId);
                 CreateMon(&party[i], partyData[monIndex].species, GetScaledLevel(partyData[i].lvl), personalityValue, otId);
             }
 
@@ -5516,8 +5517,34 @@ static void HandleEndTurn_BattleWon(void)
         switch (GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA))
         {
         case TRAINER_CLASS_ELITE_FOUR:
+            {
+                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
+                    PlayBGM(MUS_DP_VICTORY_ELITE_FOUR);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
+                    PlayBGM(MUS_DP_VICTORY_ELITE_FOUR);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
+                    {
+                        if((Random() % 2) == 1)
+                            PlayBGM(MUS_DP_VICTORY_ELITE_FOUR);
+                        else
+                            PlayBGM(MUS_DP_VICTORY_ELITE_FOUR);
+                    }
+            }
+            break;
         case TRAINER_CLASS_CHAMPION:
-            PlayBGM(MUS_VICTORY_LEAGUE);
+            {
+                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
+                    PlayBGM(MUS_DP_VICTORY_CHAMPION);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
+                    PlayBGM(MUS_DP_VICTORY_CHAMPION);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
+                    {
+                        if((Random() % 2) == 1)
+                            PlayBGM(MUS_DP_VICTORY_CHAMPION);
+                        else
+                            PlayBGM(MUS_DP_VICTORY_CHAMPION);
+                    }
+            }
             break;
         case TRAINER_CLASS_TEAM_AQUA:
         case TRAINER_CLASS_TEAM_MAGMA:
@@ -5525,13 +5552,57 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_AQUA_LEADER:
         case TRAINER_CLASS_MAGMA_ADMIN:
         case TRAINER_CLASS_MAGMA_LEADER:
-            PlayBGM(MUS_VICTORY_AQUA_MAGMA);
+            {
+                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
+                    PlayBGM(MUS_VICTORY_AQUA_MAGMA);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
+                    PlayBGM(MUS_DP_VICTORY_GALACTIC);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
+                    {
+                        if((Random() % 2) == 1)
+                            PlayBGM(MUS_DP_VICTORY_GALACTIC);
+                        else
+                            PlayBGM(MUS_VICTORY_AQUA_MAGMA);
+                    }
+            }
             break;
         case TRAINER_CLASS_LEADER:
-            PlayBGM(MUS_VICTORY_GYM_LEADER);
+            {
+                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1))
+                    PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
+                    PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                else if((gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
+                    PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
+                    {
+                        if((Random() % 3) == 1)
+                            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                        if((Random() % 3) == 2)
+                            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                        else
+                            PlayBGM(MUS_HG_VICTORY_GYM_LEADER);
+                    }
+            }
             break;
         default:
-            PlayBGM(MUS_VICTORY_TRAINER);
+            {
+                if ((gSaveBlock2Ptr->optionsTrainerBattleMusic == 0) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1))
+                    PlayBGM(MUS_HG_VICTORY_TRAINER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
+                    PlayBGM(MUS_HG_VICTORY_TRAINER);
+                else if((gSaveBlock2Ptr->optionsTrainerBattleMusic == 3) || (gSaveBlock2Ptr->optionsTrainerBattleMusic == 4))
+                    PlayBGM(MUS_HG_VICTORY_TRAINER);
+                else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 5)
+                {
+                    if((Random() % 3) == 1)
+                        PlayBGM(MUS_HG_VICTORY_TRAINER);
+                    if((Random() % 3) == 2)
+                        PlayBGM(MUS_HG_VICTORY_TRAINER);
+                    else
+                        PlayBGM(MUS_HG_VICTORY_TRAINER);
+                }  
+            }
             break;
         }
     }

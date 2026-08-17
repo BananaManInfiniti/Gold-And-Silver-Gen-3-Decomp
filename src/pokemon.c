@@ -463,7 +463,8 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #include "data/pokemon/experience_tables.h"
 
 #if P_LVL_UP_LEARNSETS >= GEN_9
-#include "data/pokemon/level_up_learnsets/gen_9.h" // Scarlet/Violet
+#include "data/pokemon/level_up_learnsets/movesets_new.h" //HnS Gen 7
+//#include "data/pokemon/level_up_learnsets/gen_9.h" // Scarlet/Violet
 #elif P_LVL_UP_LEARNSETS >= GEN_8
 #include "data/pokemon/level_up_learnsets/gen_8.h" // Sword/Shield
 #elif P_LVL_UP_LEARNSETS >= GEN_7
@@ -481,6 +482,8 @@ const struct NatureInfo gNaturesInfo[NUM_NATURES] =
 #elif P_LVL_UP_LEARNSETS >= GEN_1
 #include "data/pokemon/level_up_learnsets/gen_1.h" // Yellow
 #endif
+
+#include "data/pokemon/level_up_learnsets/movesets_old.h"
 
 #include "data/pokemon/teachable_learnsets.h"
 #include "data/pokemon/egg_moves.h"
@@ -3369,9 +3372,13 @@ u32 GetSpeciesBaseStatTotal(enum Species species)
 const struct LevelUpMove *GetSpeciesLevelUpLearnset(enum Species species)
 {
     const struct LevelUpMove *learnset = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset;
+    const struct LevelUpMove *learnset_Old = gSpeciesInfo[SanitizeSpeciesId(species)].levelUpLearnset_Old;
     if (learnset == NULL)
         return gSpeciesInfo[SPECIES_NONE].levelUpLearnset;
-    return learnset;
+    if (gSaveBlock1Ptr->tx_Mode_Modern_Moves == 0)
+        return learnset_Old;
+    else
+        return learnset;
 }
 
 const u16 *GetSpeciesTeachableLearnset(enum Species species)
@@ -5467,7 +5474,7 @@ u16 GetBattleBGM(void)
             //if ((gBattleTypeFlags & BATTLE_TYPE_FRONTIER) || (!StringCompare(gTrainers[gTrainerBattleOpponent_A].trainerName, gText_BattleWallyName)))
             {
                 if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
-                    return MUS_VS_RIVAL;
+                    return MUS_HG_VS_RIVAL;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
                     return MUS_VS_RIVAL;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)

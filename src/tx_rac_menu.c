@@ -2457,6 +2457,11 @@ static void DrawChoices_Challenges_Nuzlocke(int selection, int y)
         gSaveBlock1Ptr->tx_Challenges_Nuzlocke = 0;
         FlagClear(FLAG_NUZLOCKE);
     }
+    else if (selection == 1)
+    {
+        gSaveBlock1Ptr->tx_Challenges_Nuzlocke = 1;
+        FlagSet(FLAG_NUZLOCKE);
+    }
     else
     {
         if (selection == 2)

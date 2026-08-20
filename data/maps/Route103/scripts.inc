@@ -17,6 +17,12 @@ Route103_EventScript_OpenAlteringCave::
 	setmetatile 45, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
+Route103_EventScript_Trigger::
+	goto_if_set FLAG_BADGE_24_GET, Common_EventScript_End
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkRight
+	msgbox Route103_Text_WhatAreYouDoing, MSGBOX_AUTOCLOSE
+	end
+
 Route103_EventScript_Rival::
 	lockall
 	checkplayergender
@@ -25,37 +31,9 @@ Route103_EventScript_Rival::
 	end
 
 Route103_EventScript_RivalMay::
-	msgbox Route103_Text_MayRoute103Pokemon, MSGBOX_DEFAULT
-	closemessage
-	playbgm MUS_ENCOUNTER_MAY, TRUE
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_FacePlayer
-	waitmovement 0
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Route103_Text_MayLetsBattle, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, Route103_EventScript_StartMayBattleTreecko
-	case 1, Route103_EventScript_StartMayBattleTorchic
-	case 2, Route103_EventScript_StartMayBattleMudkip
 	end
 
 Route103_EventScript_RivalBrendan::
-	msgbox Route103_Text_BrendanRoute103Pokemon, MSGBOX_DEFAULT
-	closemessage
-	playbgm MUS_ENCOUNTER_BRENDAN, TRUE
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_FacePlayer
-	waitmovement 0
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_ExclamationMark
-	waitmovement 0
-	applymovement LOCALID_ROUTE103_RIVAL, Common_Movement_Delay48
-	waitmovement 0
-	msgbox Route103_Text_BrendanLetsBattle, MSGBOX_DEFAULT
-	switch VAR_STARTER_MON
-	case 0, Route103_EventScript_StartBrendanBattleTreecko
-	case 1, Route103_EventScript_StartBrendanBattleTorchic
-	case 2, Route103_EventScript_StartBrendanBattleMudkip
 	end
 
 Route103_EventScript_StartMayBattleTreecko::
@@ -348,3 +326,6 @@ Route103_Text_RouteSign:
 	.string "ROUTE 103\n"
 	.string "{DOWN_ARROW} OLDALE TOWN$"
 
+Route103_Text_WhatAreYouDoing:
+	.string "You can't go this way until\n"
+	.string "you get the Petalburg Gym Badge.$"

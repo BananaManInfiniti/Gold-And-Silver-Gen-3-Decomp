@@ -577,6 +577,7 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     {gObjectEventPal_Green,                  OBJ_EVENT_PAL_TAG_NPC_GREEN},
     {gObjectEventPal_Blue,                  OBJ_EVENT_PAL_TAG_NPC_BLUE},
     {gObjectEventPal_Pink,                  OBJ_EVENT_PAL_TAG_NPC_PINK},
+    {gObjectEventPal_Archer,                  OBJ_EVENT_PAL_TAG_ARCHER},
 #if OW_FOLLOWERS_POKEBALLS
     {gObjectEventPal_MasterBall,            OBJ_EVENT_PAL_TAG_BALL_MASTER},
     {gObjectEventPal_UltraBall,             OBJ_EVENT_PAL_TAG_BALL_ULTRA},
@@ -1893,7 +1894,7 @@ static u8 TrySetupObjectEventSprite(const struct ObjectEventTemplate *objectEven
     if (objectEvent->graphicsId & OBJ_EVENT_MON && objectEvent->graphicsId & OBJ_EVENT_MON_SHINY)
         objectEvent->shiny = TRUE;
 
-    spriteId = CreateSprite(spriteTemplate, 0, 0, 0);
+    spriteId = CreateSpriteUnchecked(spriteTemplate, 0, 0, 0);
     if (spriteId == MAX_SPRITES)
     {
         gObjectEvents[objectEventId].active = FALSE;
@@ -2059,7 +2060,7 @@ u8 CreateObjectGraphicsSpriteWithTag(u16 graphicsId, void (*callback)(struct Spr
         LoadObjectEventPalette(spriteTemplate->paletteTag);
     }
 
-    spriteId = CreateSprite(spriteTemplate, x, y, subpriority);
+    spriteId = CreateSpriteUnchecked(spriteTemplate, x, y, subpriority);
 
     Free(spriteTemplate);
 
@@ -2110,7 +2111,7 @@ u8 CreateVirtualObject(u16 graphicsId, u8 virtualObjId, s16 x, s16 y, u8 elevati
         LoadObjectEventPalette(spriteTemplate.paletteTag);
     }
 
-    spriteId = CreateSpriteAtEnd(&spriteTemplate, x, y, 0);
+    spriteId = CreateSpriteAtEndUnchecked(&spriteTemplate, x, y, 0);
     if (spriteId != MAX_SPRITES)
     {
         sprite = &gSprites[spriteId];
@@ -3053,7 +3054,7 @@ static void SpawnObjectEventOnReturnToField(u8 objectEventId, s16 x, s16 y)
         LoadObjectEventPalette(spriteTemplate.paletteTag);
     }
 
-    i = CreateSprite(&spriteTemplate, 0, 0, 0);
+    i = CreateSpriteUnchecked(&spriteTemplate, 0, 0, 0);
     if (i != MAX_SPRITES)
     {
         sprite = &gSprites[i];

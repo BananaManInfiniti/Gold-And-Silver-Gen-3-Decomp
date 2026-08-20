@@ -139,7 +139,7 @@
 #define TRAINER_ARIANA_2                   132
 #define TRAINER_JODY_2                   133
 #define TRAINER_UNUSED_1                   134
-#define TRAINER_JESSICA_5                   135
+#define TRAINER_HUEY_HOENN                   135
 #define TRAINER_WINSTON_1                   136
 #define TRAINER_MOLLIE                      137
 #define TRAINER_GARRET                      138

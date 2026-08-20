@@ -695,3 +695,4 @@ const u16 gObjectEventPal_White[] = INCGFX_U16("graphics/object_events/palettes/
 const u16 gObjectEventPal_Green[] = INCGFX_U16("graphics/object_events/palettes/npc_green.pal", ".gbapal");
 const u16 gObjectEventPal_Blue[] = INCGFX_U16("graphics/object_events/palettes/npc_blue.pal", ".gbapal");
 const u16 gObjectEventPal_Pink[] = INCGFX_U16("graphics/object_events/palettes/npc_pink.pal", ".gbapal");
+const u16 gObjectEventPal_Archer[] = INCGFX_U16("graphics/object_events/palettes/archer.pal", ".gbapal");

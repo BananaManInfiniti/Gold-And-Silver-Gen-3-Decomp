@@ -5738,6 +5738,23 @@ Name: Huey
 Class: Sailor
 Pic: Sailor
 Gender: Male
+Music: Hg Boy 2
+Double Battle: No
+AI: Check Bad Move
+
+Poliwhirl
+Level: 20
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Machop
+Level: 22
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_HUEY_HOENN ===
+Name: Huey
+Class: Sailor
+Pic: Sailor
+Gender: Male
 Music: Male
 Double Battle: No
 AI: Check Bad Move
@@ -13681,30 +13698,6 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Glare
 - Crunch
 
-=== TRAINER_JESSICA_5 ===
-Name: Jessica
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Kecleon
-Level: 44
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Bind
-- Lick
-- Fury Swipes
-- Feint Attack
-
-Seviper
-Level: 44
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Poison Tail
-- Screech
-- Glare
-- Crunch
 
 === TRAINER_JOCELYN ===
 Name: Jocelyn

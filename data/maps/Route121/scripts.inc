@@ -103,7 +103,7 @@ Route121_EventScript_Joy::
 	end
 
 Route121_EventScript_Jessica::
-	trainerbattle_single TRAINER_JESSICA_5, Route121_Text_JessicaIntro, Route121_Text_JessicaDefeat
+	trainerbattle_single TRAINER_HUEY_HOENN, Route121_Text_JessicaIntro, Route121_Text_JessicaDefeat
 	msgbox Route121_Text_JessicaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

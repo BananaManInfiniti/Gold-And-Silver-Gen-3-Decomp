@@ -471,7 +471,7 @@ RusturfTunnel_Text_WhyCantTheyKeepDigging:
 	.string "HNGRGH!\n"
 	.string "That's right!\p"
 	.string "If you defeat the Gym in\n"
-	.string "Fallarbor Town…\p"
+	.string "Lavaridge Town…\p"
 	.string "You'll prove to me you're strong\n"
 	.string "enough to pass through this tunnel!\p"
 	.string "Come back when you're ready, OK?$"

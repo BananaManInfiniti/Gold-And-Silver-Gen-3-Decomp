@@ -926,11 +926,11 @@ static const u8 sText_Description_Challenges_BaseStatEqualizer_Base[]   = _("{CO
 static const u8 sText_Description_Challenges_BaseStatEqualizer_100[]    = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
 static const u8 sText_Description_Challenges_BaseStatEqualizer_255[]    = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
 static const u8 sText_Description_Challenges_BaseStatEqualizer_500[]    = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
-static const u8 sText_Description_Challenges_Mirror_Off[]               = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
-static const u8 sText_Description_Challenges_Mirror_Trainer[]           = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
+static const u8 sText_Description_Challenges_Mirror_Off[]               = _("The player uses their own party.");
+static const u8 sText_Description_Challenges_Mirror_Trainer[]           = _("In Trainer battles, the player gets\na copy of the enemy's party!");
 static const u8 sText_Description_Challenges_Mirror_All[]               = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
-static const u8 sText_Description_Challenges_MirrorThief_Off[]          = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
-static const u8 sText_Description_Challenges_MirrorThief_On[]           = _("{COLOR 7}{COLOR 8}This feature is not currently\nsupported for this game.");
+static const u8 sText_Description_Challenges_MirrorThief_Off[]          = _("The player gets their own party\nback after battles.");
+static const u8 sText_Description_Challenges_MirrorThief_On[]           = _("The player keeps the enemy's party\nafter battle!");
 static const u8 *const sOptionMenuItemDescriptionsChallenges[MENUITEM_CHALLENGES_COUNT][5] =
 {
     [MENUITEM_DIFFICULTY_POKECENTER]            = {sText_Description_Difficulty_Pokecenter_Yes,         sText_Description_Difficulty_Pokecenter_No,         sText_Empty,                                        sText_Empty,                                        sText_Empty},

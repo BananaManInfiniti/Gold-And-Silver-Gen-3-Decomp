@@ -94,7 +94,6 @@ Route113_EventScript_RematchLao::
 	end
 
 Route113_EventScript_Lung::
-	trainerbattle_single TRAINER_LUNG, Route113_Text_LungIntro, Route113_Text_LungDefeat
 	msgbox Route113_Text_LungPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -192,7 +192,6 @@ MossdeepCity_Gym_EventScript_WarpToEntrance::
 	end
 
 MossdeepCity_Gym_EventScript_Preston::
-	trainerbattle_single TRAINER_PRESTON, MossdeepCity_Gym_Text_PrestonIntro, MossdeepCity_Gym_Text_PrestonDefeat
 	msgbox MossdeepCity_Gym_Text_PrestonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -202,17 +201,14 @@ MossdeepCity_Gym_EventScript_Virgil::
 	end
 
 MossdeepCity_Gym_EventScript_Blake::
-	trainerbattle_single TRAINER_BLAKE, MossdeepCity_Gym_Text_BlakeIntro, MossdeepCity_Gym_Text_BlakeDefeat
 	msgbox MossdeepCity_Gym_Text_BlakePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Hannah::
-	trainerbattle_single TRAINER_NONE, MossdeepCity_Gym_Text_HannahIntro, MossdeepCity_Gym_Text_HannahDefeat
 	msgbox MossdeepCity_Gym_Text_HannahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MossdeepCity_Gym_EventScript_Samantha::
-	trainerbattle_single TRAINER_SAMANTHA, MossdeepCity_Gym_Text_SamanthaIntro, MossdeepCity_Gym_Text_SamanthaDefeat
 	msgbox MossdeepCity_Gym_Text_SamanthaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -227,7 +223,6 @@ MossdeepCity_Gym_EventScript_Sylvia::
 	end
 
 MossdeepCity_Gym_EventScript_Nate::
-	trainerbattle_single TRAINER_NATE, MossdeepCity_Gym_Text_NateIntro, MossdeepCity_Gym_Text_NateDefeat
 	msgbox MossdeepCity_Gym_Text_NatePostBattle, MSGBOX_AUTOCLOSE
 	end
 

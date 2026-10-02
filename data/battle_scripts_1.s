@@ -1681,6 +1681,23 @@ BattleScript_BattlerAvoidedMultiHit::
 	waitmessage B_WAIT_TIME_LONG
 	return
 
+BattleScript_MultiHitPrintStrings_Singular::
+	resultmessage
+	waitmessage B_WAIT_TIME_LONG
+	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 6
+	printstring STRINGID_HITXTIME
+	waitmessage B_WAIT_TIME_LONG
+	return
+
+BattleScript_BattlerAvoidedMultiHit_Singular::
+	pause B_WAIT_TIME_SHORT
+	printstring STRINGID_BATTLERAVOIDEDATTACK
+	waitmessage B_WAIT_TIME_LONG
+	copyarray gBattleTextBuff1, sMULTIHIT_STRING, 6
+	printstring STRINGID_HITXTIME
+	waitmessage B_WAIT_TIME_LONG
+	return
+
 BattleScript_EffectConversion::
 	attackcanceler
 	tryconversiontypechange BattleScript_ButItFailed

@@ -723,16 +723,16 @@
 #define FLAG_RECEIVED_BADGE_7  0x2A4 //general flags for "the three"
 #define FLAG_HIDE_ROUTE_119_GRUNTS  0x2A5
 #define FLAG_HIDE_VS_SEEKER_NPC  0x2A6
-#define FLAG_UNUSED_0x2A7  0x2A7 // Unused Flag
-#define FLAG_UNUSED_0x2A8  0x2A8 // Unused Flag
-#define FLAG_UNUSED_0x2A9  0x2A9 // Unused Flag
-#define FLAG_UNUSED_0x2AA  0x2AA // Unused Flag
-#define FLAG_UNUSED_0x2AB  0x2AB // Unused Flag
-#define FLAG_UNUSED_0x2AC  0x2AC // Unused Flag
-#define FLAG_UNUSED_0x2AD  0x2AD // Unused Flag
-#define FLAG_UNUSED_0x2AE  0x2AE // Unused Flag
-#define FLAG_UNUSED_0x2AF  0x2AF // Unused Flag
-#define FLAG_UNUSED_0x2B0  0x2B0 // Unused Flag
+#define FLAG_HIDDEN_ITEM_ICEPATH_1F_ICE_HEAL  0x2A7
+#define FLAG_ITEM_ICEPATH4_TM_AVALANCHE  0x2A8
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER1  0x2A9
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER2  0x2AA 
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER3  0x2AB
+#define FLAG_HIDE_ICEPATH_B2F_BOULDER4  0x2AC
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER1  0x2AD
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER2  0x2AE
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER3  0x2AF
+#define FLAG_HIDE_ICEPATH_B1F_BOULDER4  0x2B0
 #define FLAG_UNUSED_0x2B1  0x2B1 // Unused Flag
 #define FLAG_UNUSED_0x2B2  0x2B2 // Unused Flag
 #define FLAG_UNUSED_0x2B3  0x2B3 // Unused Flag
@@ -1047,7 +1047,7 @@
 #define FLAG_HIDE_STEVEN_MOSSDEEP                                   0x3E4
 #define FLAG_HIDE_WALLY_MAUVILLE                                    0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6//unused
-#define FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT                0x3E7//unused
+#define FLAG_HIDE_WATTSON_MAUVILLE_CITY                             0x3E7
 
 // Item Ball Flags 
 #define FLAG_ITEM_GARBAGEFLAG                                       0x3E8    //HnS ItemFlags Block 2

@@ -1,4 +1,3 @@
-.set LOCALID_ICEPATH1_KIMONO, 9
 IcePath_1F_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, IcePath_1F_OnTransition
 	map_script MAP_SCRIPT_ON_RESUME, SetTimeEncounters
@@ -20,7 +19,7 @@ IcePath_1F_EventScript_Item_HM_Waterfall::
 
 IcePath_1F_EventScript_KimonoGirl::
 	lock
-	playbgm MUS_HG_KIMONO_GIRL, TRUE
+	playbgm MUS_HG_KIMONO_GIRL, FALSE
 	goto_if_eq VAR_FACING, DIR_SOUTH, IcePath_1F_EventScript_KimonoGirlPushPrompt
 	msgbox IcePath_1F_Text_Stuck1, MSGBOX_DEFAULT
 	closemessage

@@ -509,17 +509,15 @@ Route109_EventScript_David::
 	end
 
 Route109_EventScript_Alice::
-	trainerbattle_single TRAINER_ALICE, Route109_Text_AliceIntro, Route109_Text_AliceDefeated
 	msgbox Route109_Text_AlicePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Huey::
-	trainerbattle_single TRAINER_HUEY, Route109_Text_HueyIntro, Route109_Text_HueyDefeated
+	trainerbattle_single TRAINER_HUEY_HOENN, Route109_Text_HueyIntro, Route109_Text_HueyDefeated
 	msgbox Route109_Text_HueyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Edmond::
-	trainerbattle_single TRAINER_EDMOND, Route109_Text_EdmondIntro, Route109_Text_EdmondDefeated
 	msgbox Route109_Text_EdmondPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -564,17 +562,14 @@ Route109_EventScript_LolaRematch::
 	end
 
 Route109_EventScript_Austina::
-	trainerbattle_single TRAINER_NONE, Route109_Text_AustinaIntro, Route109_Text_AustinaDefeated
 	msgbox Route109_Text_AustinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Gwen::
-	trainerbattle_single TRAINER_GWEN, Route109_Text_GwenIntro, Route109_Text_GwenDefeated
 	msgbox Route109_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Carter::
-	trainerbattle_single TRAINER_CARTER, Route109_Text_CarterIntro, Route109_Text_CarterDefeated
 	msgbox Route109_Text_CarterPostBattle, MSGBOX_AUTOCLOSE
 	end
 

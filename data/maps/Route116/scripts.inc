@@ -227,12 +227,10 @@ Route116_Movement_GlassesManExitEast:
 	step_end
 
 Route116_EventScript_Joey::
-	trainerbattle_single TRAINER_JOEY, Route116_Text_JoeyIntro, Route116_Text_JoeyDefeat
 	msgbox Route116_Text_JoeyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route116_EventScript_Jose::
-	trainerbattle_single TRAINER_JOSE, Route116_Text_JoseIntro, Route116_Text_JoseDefeat
 	msgbox Route116_Text_JosePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -285,7 +283,6 @@ Route116_EventScript_Janice::
 	end
 
 Route116_EventScript_Karen::
-	trainerbattle_single TRAINER_KAREN_1, Route116_Text_KarenIntro, Route116_Text_KarenDefeat, Route116_EventScript_TryRegisterKarenAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Route116_EventScript_RematchKaren
 	setvar VAR_0x8004, TRAINER_KAREN_1
@@ -319,7 +316,6 @@ Route116_EventScript_RegisterKaren::
 	end
 
 Route116_EventScript_RematchKaren::
-	trainerbattle_rematch TRAINER_KAREN_1, Route116_Text_KarenRematchIntro, Route116_Text_KarenRematchDefeat
 	msgbox Route116_Text_KarenPostRematch, MSGBOX_AUTOCLOSE
 	end
 

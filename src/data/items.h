@@ -12946,9 +12946,12 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_TM51] =
     {
-        .name = ITEM_NAME("TM51"),
+        .name = ITEM_NAME("TM58"), //Avalanche
         .price = 3000,
-        .description = sQuestionMarksDesc, // Todo
+        .description = COMPOUND_STRING(
+            "Attack that moves\n"
+            "last and gains\n"
+            "power if hit."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,

@@ -286,7 +286,6 @@ Route111_EventScript_BattleWinstrates::
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VictoriaIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_VICTORIA, Route111_Text_VictoriaDefeat
 	applymovement LOCALID_ROUTE111_VICTORIA, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	call Route111_EventScript_OpenWinstrateDoor
@@ -434,7 +433,6 @@ Route111_EventScript_Drew::
 	end
 
 Route111_EventScript_Heidi::
-	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
 	msgbox Route111_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -474,7 +472,6 @@ Route111_EventScript_Travis::
 	end
 
 Route111_EventScript_Irene::
-	trainerbattle_single TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
 	msgbox Route111_Text_IrenePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -542,7 +539,6 @@ Route111_EventScript_Celia::
 	end
 
 Route111_EventScript_Bryan::
-	trainerbattle_single TRAINER_BRYAN, Route111_Text_BryanIntro, Route111_Text_BryanDefeat
 	msgbox Route111_Text_BryanPostBattle, MSGBOX_AUTOCLOSE
 	end
 

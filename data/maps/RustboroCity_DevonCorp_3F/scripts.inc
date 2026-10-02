@@ -52,22 +52,10 @@ RustboroCity_DevonCorp_3F_EventScript_MeetPresident::
 	playfanfare MUS_OBTAIN_ITEM
 	message RustboroCity_DevonCorp_3F_Text_ReceivedPokenav
 	waitfanfare
-	setflag FLAG_GARBAGEFLAG
-	setflag FLAG_RECEIVED_POKENAV
-	setflag FLAG_HIDE_RUSTBORO_CITY_POKEMON_SCHOOL_SCOTT
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneExplainPokenavRestUp, MSGBOX_DEFAULT
 	closemessage
 	call Common_EventScript_OutOfCenterPartyHeal
 	msgbox RustboroCity_DevonCorp_3F_Text_MrStoneGoWithCautionAndCare, MSGBOX_DEFAULT
-	setflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	clearflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 1
-	clearflag FLAG_GARBAGEFLAG
-	setvar VAR_GARBAGEVAR, 1
-	setvar VAR_GARBAGEVAR, 6
 	releaseall
 	end
 

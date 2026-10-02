@@ -397,6 +397,12 @@ extern const u32 gBattleEnvironmentTilemap_Plain_2[];
 extern const u16 gBattleEnvironmentPalette_Frontier_2[];
 extern const u16 gBattleEnvironmentPalette_StadiumLeader[];
 
+extern const u16 gBattleEnvironmentPalette_IceCave[];
+extern const u32 gBattleEnvironmentTiles_IceCave[];
+extern const u32 gBattleEnvironmentTilemap_IceCave[];
+extern const u32 gBattleEnvironmentAnimTiles_IceCave[];
+extern const u32 gBattleEnvironmentAnimTilemap_IceCave[];
+
 // Pokédex
 extern const u32 gPokedexInterface_Gfx[];
 extern const u16 gPokedexBgHoenn_Pal[];

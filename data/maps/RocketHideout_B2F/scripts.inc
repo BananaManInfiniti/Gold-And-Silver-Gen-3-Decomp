@@ -301,16 +301,12 @@ RocketHideout_B2F_EventScript_ReadyForBattlePrompt::
 
 RocketHideout_B2F_EventScript_ChoosePartyForMultiBattle::
 	setflag FLAG_ROCKETHIDEOUT2_BATTLE
-	special SavePlayerParty
-	fadescreen FADE_TO_BLACK
-	special ChooseHalfPartyForBattle
-	@waitstate
 	goto_if_ne VAR_RESULT, 0, RocketHideout_B2F_EventScript_DoLanceMultiBattle
 	special LoadPlayerParty
 	goto RocketHideout_B2F_EventScript_ReadyForBattlePrompt
 
 RocketHideout_B2F_EventScript_DoLanceMultiBattle::
-	multi_2_vs_2 TRAINER_ARIANA_1, RocketHideout_B2F_Text_ArianaLoss, TRAINER_GRUNT_23, RocketHideout_B2F_Text_GruntLoss, PARTNER_STEVEN
+	multi_fixed_2_vs_2 TRAINER_ARIANA_1, RocketHideout_B2F_Text_ArianaLoss, TRAINER_GRUNT_23, RocketHideout_B2F_Text_GruntLoss, PARTNER_STEVEN
 	switch VAR_RESULT
 	case 1, RocketHideout_B2F_EventScript_DefeatedAriana
 	fadescreen FADE_TO_BLACK

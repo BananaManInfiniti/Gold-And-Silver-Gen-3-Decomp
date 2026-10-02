@@ -103,7 +103,6 @@ Route121_EventScript_Joy::
 	end
 
 Route121_EventScript_Jessica::
-	trainerbattle_single TRAINER_HUEY_HOENN, Route121_Text_JessicaIntro, Route121_Text_JessicaDefeat
 	msgbox Route121_Text_JessicaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -130,7 +129,6 @@ Route121_EventScript_Myles::
 	end
 
 Route121_EventScript_Pat::
-	trainerbattle_single TRAINER_PAT, Route121_Text_PatIntro, Route121_Text_PatDefeat
 	msgbox Route121_Text_PatPostBattle, MSGBOX_AUTOCLOSE
 	end
 

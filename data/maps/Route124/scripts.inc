@@ -16,7 +16,6 @@ Route124_EventScript_Spencer::
 	end
 
 Route124_EventScript_Roland::
-	trainerbattle_single TRAINER_ROLAND, Route124_Text_RolandIntro, Route124_Text_RolandDefeat
 	msgbox Route124_Text_RolandPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -43,7 +42,6 @@ Route124_EventScript_Grace::
 	end
 
 Route124_EventScript_Chad::
-	trainerbattle_single TRAINER_CHAD, Route124_Text_ChadIntro, Route124_Text_ChadDefeat
 	msgbox Route124_Text_ChadPostBattle, MSGBOX_AUTOCLOSE
 	end
 

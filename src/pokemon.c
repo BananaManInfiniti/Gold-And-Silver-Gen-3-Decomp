@@ -3311,33 +3311,52 @@ enum Ability GetSpeciesAbility(enum Species species, u8 slot)
 
 u32 GetSpeciesBaseHP(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseHP;
 }
 
 u32 GetSpeciesBaseAttack(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseAttack;
 }
 
 u32 GetSpeciesBaseDefense(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseDefense;
 }
 
 u32 GetSpeciesBaseSpAttack(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpAttack;
 }
 
 u32 GetSpeciesBaseSpDefense(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpDefense;
 }
 
 u32 GetSpeciesBaseSpeed(enum Species species)
 {
-    return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
+    if (gSaveBlock1Ptr->tx_Mode_New_Stats == 0)
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed_old;
+    else
+        return gSpeciesInfo[SanitizeSpeciesId(species)].baseSpeed;
 }
+
 
 u32 GetSpeciesBaseStat(enum Species species, u32 statIndex)
 {
@@ -5423,10 +5442,12 @@ u16 GetBattleBGM(void)
         case TRAINER_CLASS_LEADER:
             if (gMapHeader.region == REGION_HOENN)
                 return MUS_VS_GYM_LEADER;
+            else if (gMapHeader.region == REGION_KANTO)
+                return MUS_HG_VS_GYM_LEADER_KANTO;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
                 return MUS_HG_VS_GYM_LEADER;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
-                return  MUS_RG_VS_GYM_LEADER;
+                return MUS_RG_VS_GYM_LEADER;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 2)
                 return MUS_DP_VS_GYM_LEADER;
             else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 3)
@@ -5588,6 +5609,8 @@ u16 GetBattleBGM(void)
             {
                 if (gMapHeader.region == REGION_HOENN)
                     return MUS_VS_TRAINER;
+                else if (gMapHeader.region == REGION_KANTO)
+                    return MUS_HG_VS_TRAINER_KANTO;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 0)
                     return MUS_HG_VS_TRAINER;
                 else if (gSaveBlock2Ptr->optionsTrainerBattleMusic == 1)
@@ -5618,6 +5641,8 @@ u16 GetBattleBGM(void)
     else
         if (gMapHeader.region == REGION_HOENN)
             return MUS_VS_WILD;
+        else if (gMapHeader.region == REGION_KANTO)
+            return MUS_HG_VS_WILD_KANTO;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 0)
             return MUS_HG_VS_WILD;
         else if (gSaveBlock2Ptr->optionsWildBattleMusic == 1)

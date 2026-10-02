@@ -312,6 +312,7 @@ const struct TrainerClass gTrainerClasses[TRAINER_CLASS_COUNT] =
     [TRAINER_CLASS_BIRD_KEEPER] = { _("Bird Keeper"), 8 },
     [TRAINER_CLASS_COLLECTOR] = { _("Collector"), 15, BALL_PREMIER },
     [TRAINER_CLASS_SWIMMER_M] = { _("Swimmer♂"), 2, BALL_DIVE },
+    [TRAINER_CLASS_SWIMMER_F] =       { _("Swimmer♀"), 2, BALL_DIVE },
     [TRAINER_CLASS_TEAM_MAGMA] = { _("Team Magma") },
     [TRAINER_CLASS_EXPERT] = { _("Expert"), 10 },
     [TRAINER_CLASS_AQUA_ADMIN] = { _("Aqua Admin"), 10 },
@@ -622,13 +623,13 @@ static void CB2_InitBattleInternal(void)
         if (gBattleTypeFlags & BATTLE_TYPE_MULTI)
             CalculatePartnerPartyCount();
     }
-    if (gSaveBlock1Ptr->tx_Challenges_Mirror && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+    if (gSaveBlock1Ptr->tx_Challenges_Mirror && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && !BATTLE_TWO_VS_ONE_OPPONENT)
     {
         if (!gSaveBlock1Ptr->tx_Challenges_Mirror_Thief)
         {
             for (j = 0; j < PARTY_SIZE; j++)
                 //gPlayerPartyBackup[j] = gParties[B_TRAINER_PLAYER][j];
-                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_PLAYER][j];
+                gParties[B_TRAINER_OPPONENT_B][j] = gParties[B_TRAINER_PLAYER][j];
         }
         for (j = 0; j < PARTY_SIZE; j++)
             gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_OPPONENT_A][j];
@@ -5716,10 +5717,10 @@ static void HandleEndTurn_FinishBattle(void)
     u8 j;
     if (gCurrentActionFuncId == B_ACTION_TRY_FINISH || gCurrentActionFuncId == B_ACTION_FINISHED)
     {
-        if (gSaveBlock1Ptr->tx_Challenges_Mirror && !gSaveBlock1Ptr->tx_Challenges_Mirror_Thief && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+        if (gSaveBlock1Ptr->tx_Challenges_Mirror && !gSaveBlock1Ptr->tx_Challenges_Mirror_Thief && (gBattleTypeFlags & BATTLE_TYPE_TRAINER || gBattleTypeFlags & BATTLE_TYPE_DOUBLE) && !BATTLE_TWO_VS_ONE_OPPONENT)
         {
             for (j = 0; j < PARTY_SIZE; j++)
-                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_PLAYER][j];
+                gParties[B_TRAINER_PLAYER][j] = gParties[B_TRAINER_OPPONENT_B][j]; //using OpponentB as a placeholder
         }
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK
                                   | BATTLE_TYPE_RECORDED_LINK

@@ -147,7 +147,6 @@ Route117_EventScript_RematchMaria::
 	end
 
 Route117_EventScript_Derek::
-	trainerbattle_single TRAINER_DEREK, Route117_Text_DerekIntro, Route117_Text_DerekDefeat
 	msgbox Route117_Text_DerekPostBattle, MSGBOX_AUTOCLOSE
 	end
 

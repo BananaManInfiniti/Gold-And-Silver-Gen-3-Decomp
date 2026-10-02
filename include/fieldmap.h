@@ -66,6 +66,7 @@ void MapGridSetMetatileImpassabilityAt(int x, int y, bool32 impassable);
 bool32 AreCoordsInsideMap(u8 mapGroup, u8 mapNum, s16 x, s16 y);
 bool32 AreCoordsInsidePlayerMap(s16 x, s16 y);
 bool8 IsHoennTileset(struct Tileset const *tileset);
+void FieldInitRegionMapWithOptions(MainCallback callback, bool8 allowFly);
 
 // field_region_map.c
 void FieldInitRegionMap(MainCallback callback);

@@ -83,6 +83,7 @@ static const u8 sCreditsText_Phantonomy[]                      = _("Phantonomy")
 static const u8 sCreditsText_DaniRainbow[]                     = _("DaniRainbow");
 static const u8 sCreditsText_Resetes[]                         = _("Resetes");
 static const u8 sCreditsText_Jozuno[]                          = _("Jozuno");
+static const u8 sCreditsText_HNSCreator[]                         = _("Heart and Soul Creator");
 
 static const u8 sCreditsText_Porter[]                          = _("Expansion Port");
 static const u8 sCreditsText_IAmAwesome2[]                          = _("IAmAwesome2");
@@ -165,6 +166,8 @@ static const u8 sCreditsText_Dragon121[]       = _("Dragon121");
 static const u8 sCreditsText_goldy[]            = _("Goldy");
 static const u8 sCreditsText_JonTheMoron[]     = _("JonTheMoron");
 static const u8 sCreditsText_l1ghtt[]             = _("l1ghtt");
+static const u8 sCreditsText_FallenSeraphim[]     = _("FallenSeraphim");
+static const u8 sCreditsText_AstolfoSMG[]             = _("AstolfoSMG");
 
 static const struct CreditsEntry sCreditsEntry_andyshrew = {11, FALSE, sCreditsText_andyshrew};
 static const struct CreditsEntry sCreditsEntry_nettletOn = {11, FALSE, sCreditsText_nettletOn};
@@ -179,6 +182,8 @@ static const struct CreditsEntry sCreditsEntry_Dragon121 = {11, FALSE, sCreditsT
 static const struct CreditsEntry sCreditsEntry_goldy = {11, FALSE, sCreditsText_goldy};
 static const struct CreditsEntry sCreditsEntry_JonTheMoron = {11, FALSE, sCreditsText_JonTheMoron};
 static const struct CreditsEntry sCreditsEntry_l1ghtt = {11, FALSE, sCreditsText_l1ghtt};
+static const struct CreditsEntry sCreditsEntry_FallenSeraphim = {11, FALSE, sCreditsText_FallenSeraphim};
+static const struct CreditsEntry sCreditsEntry_AstolfoSMG = {11, FALSE, sCreditsText_AstolfoSMG};
 
 
 
@@ -348,6 +353,7 @@ static const struct CreditsEntry sCreditsEntry_Credits                          
 // Executive Director
 static const struct CreditsEntry sCreditsEntry_ExecutiveDirector                = {8,  TRUE, sCreditsText_ExecutiveDirector};
 static const struct CreditsEntry sCreditsEntry_LilDill                            = {11, FALSE, sCreditsText_LilDill};
+static const struct CreditsEntry sCreditsEntry_HNSCreator                = {8,  TRUE, sCreditsText_HNSCreator};
 
 static const struct CreditsEntry sCreditsEntry_LeadDeveloper    = {8, TRUE, sCreditsText_LeadDeveloper};
 static const struct CreditsEntry sCreditsEntry_Developers    = {8, TRUE, sCreditsText_Developers};
@@ -608,9 +614,9 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
     [PAGE_HNS_DIRECTOR] = {
         &sCreditsEntry_Director,
         &sCreditsEntry_LeadDeveloper,
+        &sCreditsEntry_IAmAwesome2,
+        &sCreditsEntry_HNSCreator,
         &sCreditsEntry_LilDill,
-        _,
-        _,
     },
     [PAGE_HNS_DEVS] = {
         &sCreditsEntry_Developers,
@@ -756,8 +762,8 @@ static const struct CreditsEntry *const sCreditsEntryPointerTable[PAGE_COUNT][EN
         &sCreditsEntry_Playtesters,
         &sCreditsEntry_JonTheMoron,
         &sCreditsEntry_l1ghtt,
-        _,
-        _,
+        &sCreditsEntry_FallenSeraphim,
+        &sCreditsEntry_AstolfoSMG,
     },
     [PAGE_PARAMETRIC_DESIGNERS] = {
        _,

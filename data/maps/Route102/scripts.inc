@@ -46,7 +46,6 @@ Route102_EventScript_CalvinRegister::
 	end
 
 Route102_EventScript_CalvinRematch::
-	trainerbattle_rematch TRAINER_NONE, Route102_Text_CalvinRematchIntro, Route102_Text_CalvinRematchDefeated
 	msgbox Route102_Text_CalvinRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -61,7 +60,6 @@ Route102_EventScript_Tiana::
 	end
 
 Route102_EventScript_Allen::
-	trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -59,7 +59,6 @@ PetalburgCity_Gym_EventScript_DontMoveNormanToFront::
 	end
 
 PetalburgCity_Gym_OnWarp:
-	map_script_2 VAR_GARBAGEVAR, 1, PetalburgCity_Gym_EventScript_TurnPlayerNorth
 	.2byte 0
 
 PetalburgCity_Gym_EventScript_TurnPlayerNorth::
@@ -67,7 +66,6 @@ PetalburgCity_Gym_EventScript_TurnPlayerNorth::
 	end
 
 PetalburgCity_Gym_OnFrame:
-	map_script_2 VAR_GARBAGEVAR, 1, PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial
 	.2byte 0
 
 PetalburgCity_Gym_EventScript_ReturnFromWallyTutorial::

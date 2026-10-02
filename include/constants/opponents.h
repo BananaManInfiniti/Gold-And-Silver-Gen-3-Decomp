@@ -263,8 +263,8 @@
 #define TRAINER_THOMAS                      256
 #define TRAINER_DRAKE                       257
 #define TRAINER_SIDNEY_ELITE_FOUR           258
-#define TRAINER_WALTER_4                    259
-#define TRAINER_WALTER_5                    260
+#define TRAINER_UNUSEDNAME_3                 259 //Unused
+#define TRAINER_PRESTON_2                    260
 #define TRAINER_SIDNEY                      261
 #define TRAINER_PHOEBE                      262
 #define TRAINER_GLACIA                      263
@@ -492,8 +492,8 @@
 #define TRAINER_AMY_AND_LIV_3               485
 #define TRAINER_RYAN              486
 #define TRAINER_AMY_AND_LIV_4               487
-#define TRAINER_AMY_AND_LIV_5               488
-#define TRAINER_AMY_AND_LIV_6               489
+#define TRAINER_ALBERT_2               488
+#define TRAINER_HOPE_2                      489
 #define TRAINER_HUEY                        490
 #define TRAINER_EDMOND                      491
 #define TRAINER_MIKE                    492

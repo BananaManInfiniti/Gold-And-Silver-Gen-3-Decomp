@@ -158,7 +158,6 @@ Route118_EventScript_Barny::
 	end
 
 Route118_EventScript_Wade::
-	trainerbattle_single TRAINER_WADE, Route118_Text_WadeIntro, Route118_Text_WadeDefeat
 	msgbox Route118_Text_WadePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -180,7 +179,6 @@ Route118_EventScript_RematchDalton::
 	end
 
 Route118_EventScript_Perry::
-	trainerbattle_single TRAINER_PERRY, Route118_Text_PerryIntro, Route118_Text_PerryDefeat
 	msgbox Route118_Text_PerryPostBattle, MSGBOX_AUTOCLOSE
 	end
 

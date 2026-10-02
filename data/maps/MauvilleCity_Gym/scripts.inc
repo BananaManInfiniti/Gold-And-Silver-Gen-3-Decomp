@@ -85,6 +85,7 @@ MauvilleCity_Gym_EventScript_Wattson::
 
 MauvilleCity_Gym_EventScript_WattsonDefeated::
 	setflag FLAG_BADGE_18_GET
+	clearflag FLAG_HIDE_WATTSON_MAUVILLE_CITY
 	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
 	waitmessage
 	call Common_EventScript_PlayGymBadgeFanfare
@@ -185,7 +186,6 @@ MauvilleCity_Gym_EventScript_ClearBarriersAltState::
 	end
 
 MauvilleCity_Gym_EventScript_Kirk::
-	trainerbattle_single TRAINER_KIRK, MauvilleCity_Gym_Text_KirkIntro, MauvilleCity_Gym_Text_KirkDefeat
 	msgbox MauvilleCity_Gym_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -195,7 +195,6 @@ MauvilleCity_Gym_EventScript_Shawn::
 	end
 
 MauvilleCity_Gym_EventScript_Ben::
-	trainerbattle_single TRAINER_BEN, MauvilleCity_Gym_Text_BenIntro, MauvilleCity_Gym_Text_BenDefeat
 	msgbox MauvilleCity_Gym_Text_BenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -205,7 +204,6 @@ MauvilleCity_Gym_EventScript_Vivian::
 	end
 
 MauvilleCity_Gym_EventScript_Angelo::
-	trainerbattle_single TRAINER_NONE, MauvilleCity_Gym_Text_AngeloIntro, MauvilleCity_Gym_Text_AngeloDefeat
 	msgbox MauvilleCity_Gym_Text_AngeloPostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -6,7 +6,6 @@ AbandonedShip_Rooms_1F_EventScript_Gentleman::
 	end
 
 AbandonedShip_Rooms_1F_EventScript_Demetrius::
-	trainerbattle_single TRAINER_NONE, AbandonedShip_Rooms_1F_Text_DemetriusIntro, AbandonedShip_Rooms_1F_Text_DemetriusDefeat
 	msgbox AbandonedShip_Rooms_1F_Text_DemetriusPostBattle, MSGBOX_AUTOCLOSE
 	end
 

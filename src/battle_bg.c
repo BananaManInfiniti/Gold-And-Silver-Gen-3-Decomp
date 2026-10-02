@@ -930,8 +930,13 @@ static u8 GetBattleEnvironmentOverride(void)
         u32 trainerClass = GetTrainerClassFromId(TRAINER_BATTLE_PARAM.opponentA);
         if (trainerClass == TRAINER_CLASS_LEADER)
             return BATTLE_ENVIRONMENT_LEADER;
-        else if (trainerClass == TRAINER_CLASS_CHAMPION)
+        else if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_SILVER_CHAMPION_CYNDAQUIL)
+        || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SILVER_CHAMPION_CHIKORITA)
+        || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_SILVER_CHAMPION_TOTODILE))
             return BATTLE_ENVIRONMENT_CHAMPION;
+        else if ((TRAINER_BATTLE_PARAM.opponentA == TRAINER_LANCE_1)
+        || (TRAINER_BATTLE_PARAM.opponentA == TRAINER_LANCE_2))
+            return BATTLE_ENVIRONMENT_LANCE;
     }
 
     if (battleScene == MAP_BATTLE_SCENE_NORMAL)

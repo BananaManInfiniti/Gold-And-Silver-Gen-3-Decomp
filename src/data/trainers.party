@@ -428,7 +428,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_ZEKE ===
 Name: Zeke
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -850,7 +850,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_HARRIS ===
 Name: Harris
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -1182,7 +1182,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_JOEL ===
 Name: Joel
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -4272,7 +4272,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_KAZU ===
 Name: Kazu
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -4632,6 +4632,23 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Vulpix
 Level: 22
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_PRESTON_2 ===
+Name: Preston
+Class: Psychic
+Pic: Psychic M
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Gardevoir
+Level: 72
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Slowbro
+Level: 72
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_PARKER ===
 Name: Parker
@@ -5647,7 +5664,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_RILEY ===
 Name: Riley
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -6127,7 +6144,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_ROY ===
 Name: Roy
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -6223,7 +6240,7 @@ Double Battle: No
 AI: Check Bad Move
 
 Nidorino
-Level: 15
+Level: 75
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ETO_3 ===
@@ -7363,7 +7380,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_CHARLES ===
 Name: Charles
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -9697,7 +9714,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 === TRAINER_DWAYNE ===
 Name: Dwayne
 Class: Biker
-Pic: Biker
+Pic: Biker FRLG
 Gender: Male
 Music: Hg Boy 2
 Double Battle: No
@@ -10909,6 +10926,28 @@ AI: Check Bad Move
 Ampharos
 Level: 61
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_HOPE_2 ===
+Name: Hope
+Class: Cooltrainer
+Pic: Cooltrainer F
+Gender: Female
+Music: Cool
+Items: Full Restore
+Double Battle: No
+AI: Basic Trainer
+
+Roserade
+Level: 90
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Swampert
+Level: 90
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+
+Arcanine
+Level: 90
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BARRY ===
 Name: Barry
@@ -12138,7 +12177,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Blizzard
 
 Tentacruel
-Level: 73
+Level: 70
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Toxic
 - Hydro Pump
@@ -12146,7 +12185,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Ice Beam
 
 Ludicolo
-Level: 75
+Level: 71
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Giga Drain
 - Surf
@@ -12154,7 +12193,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Double Team
 
 Whiscash @ Sitrus Berry
-Level: 76
+Level: 71
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Earthquake
 - Surf
@@ -12162,7 +12201,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hyper Beam
 
 Gyarados @ Wacan Berry
-Level: 77
+Level: 72
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Dragon Dance
 - Earthquake
@@ -12170,7 +12209,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Surf
 
 Milotic @ Flame Orb
-Level: 78
+Level: 73
 Ability: Marvel Scale
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Recover
@@ -12189,7 +12228,7 @@ Double Battle: No
 AI: Basic Trainer
 
 Raichu
-Level: 80
+Level: 71
 IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Thunderbolt
 - Charge
@@ -12197,7 +12236,7 @@ IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 - Grass Knot
 
 Electrode
-Level: 81
+Level: 72
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Rollout
 - Thunderbolt
@@ -12205,7 +12244,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Shock Wave
 
 Ampharos
-Level: 81
+Level: 73
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Thunderbolt
 - Signal Beam
@@ -12213,7 +12252,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Thunder Wave
 
 Electivire
-Level: 82
+Level: 74
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Giga Impact
 - Thunder Punch
@@ -12221,7 +12260,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Quick Attack
 
 Magnezone @ Sitrus Berry
-Level: 83
+Level: 74
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Mirror Shot
 - Thunderbolt
@@ -12229,7 +12268,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Light Screen
 
 Manectric @ Zap Plate
-Level: 84
+Level: 75
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Quick Attack
 - Thunder Wave
@@ -12869,55 +12908,31 @@ Minun
 Level: 30
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_AMY_AND_LIV_5 ===
-Name: Amy
-Class: Twins
-Pic: Twins
+=== TRAINER_ALBERT_2 ===
+Name: Albert
+Class: Cooltrainer
+Pic: Cooltrainer M
 Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
+Music: Cool
+Items: Full Restore
+Double Battle: No
+AI: Basic Trainer
 
-Plusle
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Fake Tears
-- Helping Hand
+Magnezone
+Level: 95
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Minun
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Charm
-- Helping Hand
+Muk
+Level: 95
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-=== TRAINER_AMY_AND_LIV_6 ===
-Name: Amy
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
+Ursaluna
+Level: 95
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Plusle
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Thunder
-- Charge
-- Fake Tears
-- Helping Hand
-
-Minun
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Thunder
-- Charge
-- Charm
-- Helping Hand
+Swalot
+Level: 95
+IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_BENJAMIN_1 ===
 Name: Benjamin
@@ -13726,7 +13741,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Goldeen
-Level: 13
+Level: 72
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+Seaking
+Level: 72
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_JOHNSON ===
@@ -14944,12 +14963,12 @@ Music: Girl
 Double Battle: No
 AI: Check Bad Move
 
-Azurill
-Level: 12
+Azumarill
+Level: 72
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
-Azurill
-Level: 12
+Azumarill
+Level: 72
 IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
 
 === TRAINER_SCIENTIST_1 ===
@@ -18955,7 +18974,7 @@ IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 - Calm Mind
 - Psychic
 - Dazzling Gleam
-- Earth Power
+- Grass Knot
 
 === TRAINER_WALLY_VR_1 ===
 Name: Wally
@@ -19219,63 +19238,6 @@ AI: Check Bad Move
 Manectric
 Level: 85
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_WALTER_4 ===
-Name: Walter
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 39
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Headbutt
-- Sand Attack
-- Odor Sleuth
-- Fury Swipes
-
-Manectric
-Level: 39
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Quick Attack
-- Spark
-- Odor Sleuth
-
-=== TRAINER_WALTER_5 ===
-Name: Walter
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Double Battle: No
-AI: Check Bad Move
-
-Linoone
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Headbutt
-- Sand Attack
-- Odor Sleuth
-- Fury Swipes
-
-Golduck
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Fury Swipes
-- Disable
-- Confusion
-- Psych Up
-
-Manectric
-Level: 41
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Quick Attack
-- Spark
-- Odor Sleuth
-- Roar
 
 === TRAINER_WATTSON_4 ===
 Name: Wattson

@@ -24,6 +24,18 @@ MauvilleCity_GameCorner_EventScript_CoinsClerk::
 	showcoinsbox 1, 6
 	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault50
 
+GoldenrodCity_GameCorner_EventScript_CoinsClerk::
+	lock
+	faceplayer
+	msgbox GoldenrodCity_GameCorner_Text_ThisIsGoldenrodGameCorner, MSGBOX_DEFAULT
+	checkitem ITEM_COIN_CASE
+	goto_if_eq VAR_RESULT, FALSE, MauvilleCity_GameCorner_EventScript_NeedCoinCase
+	message MauvilleCity_GameCorner_Text_WereYouLookingForCoins
+	waitmessage
+	showmoneybox 0, 0
+	showcoinsbox 1, 6
+	goto MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault50
+
 MauvilleCity_GameCorner_EventScript_ChooseCoinsDefault50::
 	multichoicedefault 15, 0, MULTI_GAME_CORNER_COINS, 0, FALSE
 	switch VAR_RESULT
@@ -628,6 +640,9 @@ MauvilleCity_GameCorner_EventScript_NoCoinCase::
 
 MauvilleCity_GameCorner_Text_ThisIsMauvilleGameCorner:
 	.string "This is MAUVILLE GAME CORNER.$"
+
+GoldenrodCity_GameCorner_Text_ThisIsGoldenrodGameCorner:
+	.string "This is GOLDENROD GAME CORNER.$"
 
 MauvilleCity_GameCorner_Text_NeedCoinCaseForCoins:
 	.string "Okay, you wanted some COINS for\n"

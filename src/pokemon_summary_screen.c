@@ -1804,6 +1804,12 @@ static void Task_HandleInput(u8 taskId)
                 HandleMoveRelearnerInput(taskId);
                 PlaySE(SE_SELECT);
             }
+            else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+                {
+                    ShowMonSkillsInfo(taskId, SUMMARY_SKILLS_MODE_STATS);
+                    sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
+                    PlaySE(SE_SELECT);
+                }
         }
         else if (JOY_NEW(A_BUTTON))
         {
@@ -1815,20 +1821,30 @@ static void Task_HandleInput(u8 taskId)
                     SwitchToMoveSelection(taskId);
                 }
             }
-            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-            {
-                if (ShouldShowIvEvPrompt())
-                {
-                    ShowMonSkillsInfo(taskId, IncrementSkillsStatsMode(sMonSummaryScreen->skillsPageMode));
-                    PlaySE(SE_SELECT);
-                }
-            }
         }
         else if (JOY_NEW(B_BUTTON))
         {
             StopPokemonAnimations();
             PlaySE(SE_SELECT);
             BeginCloseSummaryScreen(taskId);
+        }
+        else if (JOY_NEW(R_BUTTON))
+        {
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+            {
+                ShowMonSkillsInfo(taskId, SUMMARY_SKILLS_MODE_IVS);
+                sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_IVS;
+                PlaySE(SE_SELECT);
+            }
+        }
+        else if (JOY_NEW(L_BUTTON))
+        {
+            if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
+            {
+                ShowMonSkillsInfo(taskId, SUMMARY_SKILLS_MODE_EVS);
+                sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_EVS;
+                PlaySE(SE_SELECT);
+            }
         }
         else if (DEBUG_POKEMON_SPRITE_VISUALIZER && JOY_NEW(SELECT_BUTTON) && !gMain.inBattle)
         {
@@ -2201,10 +2217,13 @@ static void ChangePage(u8 taskId, s8 delta)
         if (sMonSummaryScreen->skillsPageMode != SUMMARY_SKILLS_MODE_STATS)
             sMonSummaryScreen->skillsPageMode = SUMMARY_SKILLS_MODE_STATS;
 
-        ShowUtilityPrompt(sMonSummaryScreen->skillsPageMode);
         ExtractMonSkillStatsData(mon, summary);
         BufferLeftColumnStats();
         BufferRightColumnStats();
+        // Hide the utility prompt while on the skills page.
+        FillWindowPixelBuffer(PSS_LABEL_WINDOW_PROMPT_UTILITY, PIXEL_FILL(0));
+        ClearWindowTilemap(PSS_LABEL_WINDOW_PROMPT_UTILITY);
+        CopyWindowToVram(PSS_LABEL_WINDOW_PROMPT_UTILITY, COPYWIN_FULL);
     }
     else
     {
@@ -4817,30 +4836,6 @@ static inline void ShowUtilityPrompt(s16 mode)
             promptText = gText_Rename;
         else
             promptText = gText_Cancel2;
-    }
-    else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
-    {
-        if (ShouldShowIvEvPrompt())
-        {
-            if (mode == SUMMARY_SKILLS_MODE_STATS)
-            {
-                if (P_SUMMARY_SCREEN_EV_ONLY)
-                    promptText = gText_SkillPageEvs;
-                else
-                    promptText = gText_SkillPageIvs;
-            }
-            else if (mode == SUMMARY_SKILLS_MODE_IVS)
-            {
-                if (P_SUMMARY_SCREEN_IV_ONLY)
-                    promptText = gText_SkillPageStats;
-                else
-                    promptText = gText_SkillPageEvs;
-            }
-            else if (mode == SUMMARY_SKILLS_MODE_EVS)
-            {
-                promptText = gText_SkillPageStats;
-            }
-        }
     }
     else if (sMonSummaryScreen->currPageIndex == PSS_PAGE_BATTLE_MOVES
              || sMonSummaryScreen->currPageIndex == PSS_PAGE_CONTEST_MOVES)

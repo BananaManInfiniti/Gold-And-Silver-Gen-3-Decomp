@@ -31,12 +31,10 @@ Route127_EventScript_Donny::
 	end
 
 Route127_EventScript_Jonah::
-	trainerbattle_single TRAINER_JONAH, Route127_Text_JonahIntro, Route127_Text_JonahDefeat
 	msgbox Route127_Text_JonahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route127_EventScript_Henry::
-	trainerbattle_single TRAINER_HENRY, Route127_Text_HenryIntro, Route127_Text_HenryDefeat
 	msgbox Route127_Text_HenryPostBattle, MSGBOX_AUTOCLOSE
 	end
 

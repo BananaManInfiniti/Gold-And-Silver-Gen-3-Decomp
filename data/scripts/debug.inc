@@ -55,6 +55,10 @@ Debug_CheatStart::
 	@giveitem ITEM_HM_SURF
 	@giveitem ITEM_HM_DIVE
 	giveitem ITEM_MASTER_BALL, 100
+	setvar VAR_LUGIA_OR_HOOH, 2
+	setvar VAR_ECRUTEAK_CITY_THEATER, 5
+	setvar VAR_NEWBARKTOWN_LABSTATE, 7
+	clearflag FLAG_HIDE_ECRUTEAK_CITY_THEATER_NPCS
 
 	special SetUnlockedPokedexFlags
 	special EnableNationalPokedex

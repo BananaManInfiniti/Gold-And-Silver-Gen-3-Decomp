@@ -411,7 +411,6 @@ MtChimney_EventScript_Tabitha::
 	end
 
 MtChimney_EventScript_Grunt2::
-	trainerbattle_single TRAINER_NONE, MtChimney_Text_Grunt2Intro, MtChimney_Text_Grunt2Defeat
 	msgbox MtChimney_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -507,7 +506,6 @@ MtChimney_EventScript_Sheila::
 	end
 
 MtChimney_EventScript_Shirley::
-	trainerbattle_single TRAINER_SHIRLEY, MtChimney_Text_ShirleyIntro, MtChimney_Text_ShirleyDefeat
 	msgbox MtChimney_Text_ShirleyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -517,7 +515,6 @@ MtChimney_EventScript_Grunt1::
 	end
 
 MtChimney_EventScript_Sawyer::
-	trainerbattle_single TRAINER_SAWYER_1, MtChimney_Text_SawyerIntro, MtChimney_Text_SawyerDefeat
 	msgbox MtChimney_Text_SawyerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -529,7 +526,6 @@ MtChimney_EventScript_SawyerDefeated::
 	end
 
 MtChimney_EventScript_SawyerRematch::
-	trainerbattle_rematch TRAINER_SAWYER_1, MtChimney_Text_SawyerRematchIntro, MtChimney_Text_SawyerRematchDefeat
 	msgbox MtChimney_Text_SawyerPostRematch, MSGBOX_AUTOCLOSE
 	end
 

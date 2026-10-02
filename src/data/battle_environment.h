@@ -599,6 +599,20 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .palette = gBattleEnvironmentPalette_StadiumLance_2,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
+
+    [BATTLE_ENVIRONMENT_ICE_CAVE] =
+    {
+        .name = _("Ice Cave"),
+        .naturePower = CAVE_NATURE_POWER,
+        .secretPowerAnimation = CAVE_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = CAVE_SECRET_POWER_EFFECT,
+        .camouflageType = CAVE_CAMOUFLAGE_TYPE,
+        .camouflageBlend = CAVE_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(Cave),
+        .background = ENVIRONMENT_BACKGROUND(Cave),
+        .palette = gBattleEnvironmentPalette_Cave,
+        .battleIntroSlide = CAVE_BATTLE_INTRO_SLIDE,
+    },
     
 };
 
@@ -1134,6 +1148,20 @@ const struct BattleEnvironment gBattleEnvironmentInfo2[BATTLE_ENVIRONMENT_COUNT]
         .palette = gBattleEnvironmentPalette_StadiumLance_2,
         .battleIntroSlide = BUILDING_BATTLE_INTRO_SLIDE,
     },
+
+    [BATTLE_ENVIRONMENT_ICE_CAVE] =
+    {
+        .name = _("Ice Cave"),
+        .naturePower = CAVE_NATURE_POWER,
+        .secretPowerAnimation = CAVE_SECRET_POWER_ANIMATION,
+        .secretPowerEffect = CAVE_SECRET_POWER_EFFECT,
+        .camouflageType = CAVE_CAMOUFLAGE_TYPE,
+        .camouflageBlend = CAVE_CAMOUFLAGE_BLEND,
+        .entry = ENVIRONMENT_ENTRY(IceCave),
+        .background = ENVIRONMENT_BACKGROUND(IceCave),
+        .palette = gBattleEnvironmentPalette_IceCave,
+        .battleIntroSlide = CAVE_BATTLE_INTRO_SLIDE,
+    },
     
 };
 
@@ -1148,5 +1176,9 @@ static const struct {
     {MAP_BATTLE_SCENE_PHOEBE,   BATTLE_ENVIRONMENT_PHOEBE},
     {MAP_BATTLE_SCENE_GLACIA,   BATTLE_ENVIRONMENT_GLACIA},
     {MAP_BATTLE_SCENE_DRAKE,    BATTLE_ENVIRONMENT_DRAKE},
-    {MAP_BATTLE_SCENE_FRONTIER, BATTLE_ENVIRONMENT_FRONTIER}
+    {MAP_BATTLE_SCENE_FRONTIER, BATTLE_ENVIRONMENT_FRONTIER},
+    {MAP_BATTLE_SCENE_WILL,    BATTLE_ENVIRONMENT_WILL},
+    {MAP_BATTLE_SCENE_KOGA,    BATTLE_ENVIRONMENT_KOGA},
+    {MAP_BATTLE_SCENE_BRUNO,    BATTLE_ENVIRONMENT_BRUNO},
+    {MAP_BATTLE_SCENE_KAREN,    BATTLE_ENVIRONMENT_KAREN}
 };

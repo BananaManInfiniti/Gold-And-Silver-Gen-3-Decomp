@@ -159,8 +159,8 @@ VioletCity_TrainerSchool_Text_Youngster2:
 VioletCity_TrainerSchool_Text_Blackboard:
 	.string "The blackboard describes\n"
 	.string "Pokémon HM moves.\p"
-	.string "HMs, once unlocked, don't need to\n"
-	.string "be taught to be used.$"
+	.string "HMs need to be taught to Pokémon\n"
+	.string "in order to use them.$"
 
 VioletCity_TrainerSchool_Text_Notebook:
 	.string "It's this kid's notebook…\p"

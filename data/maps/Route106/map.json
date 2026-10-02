@@ -1,112 +1,112 @@
 {
-  "id": "MAP_ROUTE106",
-  "name": "Route106",
-  "layout": "LAYOUT_ROUTE106",
-  "music": "MUS_ROUTE104",
-  "region_map_section": "MAPSEC_ROUTE_106",
-  "requires_flash": false,
-  "weather": "WEATHER_SUNNY",
-  "map_type": "MAP_TYPE_ROUTE",
-  "allow_cycling": true,
-  "allow_escaping": false,
-  "allow_running": true,
-  "show_map_name": true,
-  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": [
-    {
-      "map": "MAP_ROUTE105",
-      "offset": 0,
-      "direction": "up"
-    },
-    {
-      "map": "MAP_DEWFORD_TOWN",
-      "offset": 60,
-      "direction": "down"
-    }
-  ],
-  "object_events": [
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M",
-      "x": 18,
-      "y": 5,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT",
-      "movement_range_x": 4,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route106_EventScript_Douglas",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F",
-      "x": 29,
-      "y": 10,
-      "elevation": 1,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route106_EventScript_Kyla",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 29,
-      "y": 14,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_PROTEIN",
-      "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_GARBAGEFLAG"
-    }
-  ],
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL", 
+  "layout": "LAYOUT_ROUTE106", 
+  "name": "Route106", 
+  "coord_events": [], 
   "warp_events": [
     {
-      "x": 48,
-      "y": 16,
-      "elevation": 0,
-      "dest_map": "MAP_GRANITE_CAVE_1F",
-      "dest_warp_id": "0"
+      "y": 16, 
+      "x": 48, 
+      "dest_warp_id": "0", 
+      "elevation": 0, 
+      "dest_map": "MAP_GRANITE_CAVE_1F"
     }
-  ],
-  "coord_events": [],
+  ], 
+  "allow_escaping": false, 
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_M", 
+      "elevation": 1, 
+      "trainer_type": "TRAINER_TYPE_NONE", 
+      "script": "Route106_EventScript_Douglas", 
+      "trainer_sight_or_berry_tree_id": "0", 
+      "flag": "0", 
+      "movement_range_x": 4, 
+      "movement_range_y": 0, 
+      "movement_type": "MOVEMENT_TYPE_WALK_LEFT_AND_RIGHT", 
+      "y": 5, 
+      "x": 18
+    }, 
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SWIMMER_F", 
+      "elevation": 1, 
+      "trainer_type": "TRAINER_TYPE_NORMAL", 
+      "script": "Route106_EventScript_Kyla", 
+      "trainer_sight_or_berry_tree_id": "3", 
+      "flag": "0", 
+      "movement_range_x": 0, 
+      "movement_range_y": 0, 
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND", 
+      "y": 10, 
+      "x": 29
+    }, 
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL", 
+      "elevation": 3, 
+      "trainer_type": "TRAINER_TYPE_NONE", 
+      "script": "Common_EventScript_FindItem", 
+      "trainer_sight_or_berry_tree_id": "ITEM_PROTEIN", 
+      "flag": "FLAG_GARBAGEFLAG", 
+      "movement_range_x": 0, 
+      "movement_range_y": 0, 
+      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND", 
+      "y": 14, 
+      "x": 29
+    }
+  ], 
+  "connections": [
+    {
+      "map": "MAP_ROUTE105", 
+      "direction": "up", 
+      "offset": 0
+    }, 
+    {
+      "map": "MAP_DEWFORD_TOWN", 
+      "direction": "down", 
+      "offset": 60
+    }
+  ], 
+  "region_map_section": "MAPSEC_ROUTE_106", 
+  "weather": "WEATHER_SUNNY", 
+  "music": "MUS_ROUTE104", 
+  "allow_running": true, 
+  "map_type": "MAP_TYPE_ROUTE", 
+  "allow_cycling": true, 
+  "requires_flash": false, 
+  "show_map_name": true, 
+  "id": "MAP_ROUTE106", 
   "bg_events": [
     {
-      "type": "hidden_item",
-      "x": 41,
-      "y": 11,
-      "elevation": 3,
-      "item": "ITEM_POKE_BALL",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_POKE_BALL"
-    },
+      "elevation": 3, 
+      "item": "ITEM_POKE_BALL", 
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_POKE_BALL", 
+      "y": 11, 
+      "x": 41, 
+      "type": "hidden_item"
+    }, 
     {
-      "type": "hidden_item",
-      "x": 53,
-      "y": 12,
-      "elevation": 0,
-      "item": "ITEM_STARDUST",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_STARDUST"
-    },
+      "elevation": 0, 
+      "item": "ITEM_STARDUST", 
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_STARDUST", 
+      "y": 12, 
+      "x": 53, 
+      "type": "hidden_item"
+    }, 
     {
-      "type": "hidden_item",
-      "x": 68,
-      "y": 15,
-      "elevation": 3,
-      "item": "ITEM_HEART_SCALE",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_HEART_SCALE"
-    },
+      "elevation": 3, 
+      "item": "ITEM_HEART_SCALE", 
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_106_HEART_SCALE", 
+      "y": 15, 
+      "x": 68, 
+      "type": "hidden_item"
+    }, 
     {
-      "type": "sign",
-      "x": 59,
-      "y": 13,
-      "elevation": 3,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route106_EventScript_TrainerTipsSign"
+      "elevation": 3, 
+      "script": "Route106_EventScript_TrainerTipsSign", 
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY", 
+      "y": 13, 
+      "x": 59, 
+      "type": "sign"
     }
   ]
 }

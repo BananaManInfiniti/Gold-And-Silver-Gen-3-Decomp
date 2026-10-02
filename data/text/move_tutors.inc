@@ -190,13 +190,13 @@ MoveTutor_Text_DynamicPunchTaught:
 
 MoveTutor_Text_DoubleEdgeTeach:
 	.string "Sigh…\p"
-	.string "SOOTOPOLIS's GYM LEADER is really\n"
+	.string "The GYM LEADER is really\n"
 	.string "lovably admirable.\p"
 	.string "But that also means I have many\n"
 	.string "rivals for his attention.\p"
 	.string "He's got appeal with a DOUBLE-EDGE.\n"
 	.string "I couldn't even catch his eye.\p"
-	.string "Please, let me teach your Pokémon\n"
+	.string "Please, let me teach your POKéMON\n"
 	.string "the move DOUBLE-EDGE!$"
 
 MoveTutor_Text_DoubleEdgeDeclined:

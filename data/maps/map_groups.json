@@ -31,7 +31,8 @@
     "gMapGroup_Emerald2",
     "gMapGroup_Emerald3",
     "gMapGroup_Emerald4",
-    "gMapGroup_Emerald5"
+    "gMapGroup_Emerald5",
+    "gMapGroup_IcePath"
   ],
   "gMapGroup_TownsAndRoutes": [
     "NewBarkTown",
@@ -407,11 +408,6 @@
     "MtMortar_B1F",
     "LakeOfRage",
     "LakeOfRageLowTide",
-    "IcePath_1F",
-    "IcePath_B1F",
-    "IcePath_B2F",
-    "IcePath_B3F",
-    "IcePath_B4F",
     "DragonsDen_Entrance",
     "DragonsDen_Cavern",
     "DragonsDen_Shrine",
@@ -1046,5 +1042,12 @@
     "Route119_House",
     "Route124_DivingTreasureHuntersHouse",
     "SlateportCity_Gym"
+  ],
+  "gMapGroup_IcePath": [
+    "IcePath_1F",
+    "IcePath_B1F",
+    "IcePath_B2F",
+    "IcePath_B3F",
+    "IcePath_B4F"
   ]
 }

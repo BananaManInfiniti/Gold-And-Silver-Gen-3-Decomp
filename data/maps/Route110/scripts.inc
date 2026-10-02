@@ -227,9 +227,6 @@ Route110_EventScript_Jasmine::
 	end
 
 Route110_EventScript_Abigail::
-	trainerbattle_single TRAINER_NONE, Route110_Text_AbigailIntro, Route110_Text_AbigailDefeated, Route110_EventScript_AbigailRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route110_EventScript_AbigailRematch
 	msgbox Route110_Text_AbigailPostBattle, MSGBOX_DEFAULT
 	release
 	end

@@ -94,7 +94,6 @@ JaggedPass_EventScript_GuardDefeated::
 	end
 
 JaggedPass_EventScript_Eric::
-	trainerbattle_single TRAINER_ERIC, JaggedPass_Text_EricIntro, JaggedPass_Text_EricDefeat
 	msgbox JaggedPass_Text_EricPostBattle, MSGBOX_AUTOCLOSE
 	end
 

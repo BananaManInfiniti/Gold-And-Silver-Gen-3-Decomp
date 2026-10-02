@@ -297,7 +297,6 @@ Route110_TrickHousePuzzle3_EventScript_Martha::
 	end
 
 Route110_TrickHousePuzzle3_EventScript_Alan::
-	trainerbattle_single TRAINER_ALAN, Route110_TrickHousePuzzle3_Text_AlanIntro, Route110_TrickHousePuzzle3_Text_AlanDefeat
 	msgbox Route110_TrickHousePuzzle3_Text_AlanPostBattle, MSGBOX_AUTOCLOSE
 	end
 

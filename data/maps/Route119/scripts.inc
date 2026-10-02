@@ -267,12 +267,10 @@ Route119_EventScript_WeatherInstituteSign::
 	end
 
 Route119_EventScript_Brent::
-	trainerbattle_single TRAINER_BRENT, Route119_Text_BrentIntro, Route119_Text_BrentDefeat
 	msgbox Route119_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Donald::
-	trainerbattle_single TRAINER_DONALD, Route119_Text_DonaldIntro, Route119_Text_DonaldDefeat
 	msgbox Route119_Text_DonaldPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -282,17 +280,14 @@ Route119_EventScript_Taylor::
 	end
 
 Route119_EventScript_Doug::
-	trainerbattle_single TRAINER_DOUG, Route119_Text_DougIntro, Route119_Text_DougDefeat
 	msgbox Route119_Text_DougPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Greg::
-	trainerbattle_single TRAINER_GREG, Route119_Text_GregIntro, Route119_Text_GregDefeat
 	msgbox Route119_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Kent::
-	trainerbattle_single TRAINER_KENT, Route119_Text_KentIntro, Route119_Text_KentDefeat
 	msgbox Route119_Text_KentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -336,7 +331,6 @@ Route119_EventScript_Hugh::
 	end
 
 Route119_EventScript_Phil::
-	trainerbattle_single TRAINER_PHIL, Route119_Text_PhilIntro, Route119_Text_PhilDefeat
 	msgbox Route119_Text_PhilPostBattle, MSGBOX_AUTOCLOSE
 	end
 

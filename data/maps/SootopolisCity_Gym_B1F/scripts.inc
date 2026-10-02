@@ -33,7 +33,6 @@ SootopolisCity_Gym_B1F_EventScript_Connie::
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Bridget::
-	trainerbattle_single TRAINER_BRIDGET, SootopolisCity_Gym_B1F_Text_BridgetIntro, SootopolisCity_Gym_B1F_Text_BridgetDefeat
 	msgbox SootopolisCity_Gym_B1F_Text_BridgetPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -43,7 +42,6 @@ SootopolisCity_Gym_B1F_EventScript_Olivia::
 	end
 
 SootopolisCity_Gym_B1F_EventScript_Tiffany::
-	trainerbattle_single TRAINER_TIFFANY, SootopolisCity_Gym_B1F_Text_TiffanyIntro, SootopolisCity_Gym_B1F_Text_TiffanyDefeat
 	msgbox SootopolisCity_Gym_B1F_Text_TiffanyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

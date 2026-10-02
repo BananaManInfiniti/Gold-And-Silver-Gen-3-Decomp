@@ -201,7 +201,7 @@ static const u8 *const sTransferredToPCMessages[] =
 };
 
 static const u8 *const gSilverPresetNames[] = {
-    gText_ExpandedPlaceholder_Silver
+    COMPOUND_STRING("SILVER"),
 };
 
 void NameRival(void)

@@ -263,7 +263,6 @@ Route120_EventScript_RouteSign121::
 	end
 
 Route120_EventScript_Colin::
-	trainerbattle_single TRAINER_COLIN, Route120_Text_ColinIntro, Route120_Text_ColinDefeat
 	msgbox Route120_Text_ColinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -343,7 +342,6 @@ Route120_EventScript_Keigo::
 	end
 
 Route120_EventScript_Riley::
-	trainerbattle_single TRAINER_RILEY, Route120_Text_RileyIntro, Route120_Text_RileyDefeat
 	msgbox Route120_Text_RileyPostBattle, MSGBOX_AUTOCLOSE
 	end
 

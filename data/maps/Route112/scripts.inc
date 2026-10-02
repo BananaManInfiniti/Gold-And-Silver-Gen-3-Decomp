@@ -49,12 +49,10 @@ Route112_EventScript_RematchTrent::
 	end
 
 Route112_EventScript_Larry::
-	trainerbattle_single TRAINER_LARRY, Route112_Text_LarryIntro, Route112_Text_LarryDefeat
 	msgbox Route112_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route112_EventScript_Carol::
-	trainerbattle_single TRAINER_CAROL, Route112_Text_CarolIntro, Route112_Text_CarolDefeat
 	msgbox Route112_Text_CarolPostBattle, MSGBOX_AUTOCLOSE
 	end
 

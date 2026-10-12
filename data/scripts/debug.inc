@@ -237,6 +237,10 @@ Debug_EventScript_Script_2::
 	end
 
 Debug_EventScript_Script_3::
+	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE
+	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR_MULTI
+	clearflag FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER
+	setvar VAR_SILVER_POSTGAME_STATE, 1
 	release
 	end
 

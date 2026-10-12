@@ -53,8 +53,10 @@ MtMoon_Cave_EventScript_SilverAfterBattle::
 	removeobject LOCALID_MTMOON_SILVER
 	setflag FLAG_HIDE_MTMOON_SILVER
 	clearflag FLAG_HIDE_INDIGO_PLATEAU_SILVER
+	clearflag FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER
+	setvar VAR_SILVER_POSTGAME_STATE, 1
 	setvar VAR_PEWTER_CITY_STATE, 2
-		fadedefaultbgm
+	fadedefaultbgm
 	release
 	end
 

@@ -5440,7 +5440,9 @@ u16 GetBattleBGM(void)
             }
             return MUS_VS_AQUA_MAGMA;
         case TRAINER_CLASS_LEADER:
-            if (gMapHeader.region == REGION_HOENN)
+            if (TRAINER_BATTLE_PARAM.opponentA == TRAINER_CLAIR_DRAGONS_DEN)
+                return MUS_HG_VS_TRAINER;
+            else if (gMapHeader.region == REGION_HOENN)
                 return MUS_VS_GYM_LEADER;
             else if (gMapHeader.region == REGION_KANTO)
                 return MUS_HG_VS_GYM_LEADER_KANTO;

@@ -284,7 +284,7 @@ const u16 ALIGNED(4) gTilesetPalettes_Sootopolis[][16] =
     INCGFX_U16("data/tilesets/secondary/sootopolis/palettes/15.pal", ".gbapal"),
 };
 
-const u32 gTilesetTiles_BattleFrontierOutsideWest[] = INCGFX_U32("data/tilesets/secondary/battle_frontier_outside_west/tiles.png", ".4bpp.fastSmol", "-num_tiles 508 -Wnum_tiles");
+const u32 gTilesetTiles_BattleFrontierOutsideWest[] = INCGFX_U32("data/tilesets/secondary/battle_frontier_outside_west/tiles.png", ".4bpp.fastSmol");
 
 const u16 ALIGNED(4) gTilesetPalettes_BattleFrontierOutsideWest[][16] =
 {

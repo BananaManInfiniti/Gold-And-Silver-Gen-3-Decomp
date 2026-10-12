@@ -836,7 +836,7 @@
 #define FLAG_GOT_HIDDEN_POWER                                       0x311
 #define FLAG_GOT_SPELL_TAG                                          0x312 
 #define FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER                         0x313
-#define FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR                          0x314//unused
+#define FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR                          0x314
 #define FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE                          0x315
 #define FLAG_HIDE_DRAGONS_DEN_SHRINE_CLAIR                          0x316
 #define FLAG_GOT_DRATINI                                            0x317
@@ -846,7 +846,7 @@
 #define FLAG_INDIGOJUNCTION_HIDE_SILVER_GUARD                       0x31B
 #define FLAG_HIDE_VERMILION_EUSINE_SUICUNE                          0x31C //HnS NormalFlags Block 3
 #define FLAG_GOT_VERMILION_HP_UP                                    0x31D
-#define FLAG_UNUSED_FLAG_999                                        0x31E
+#define FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR_MULTI                    0x31E
 #define FLAG_HIDE_VERMILION_SNORLAX                                 0x31F
 #define FLAG_HIDE_LUGIA                                             0x320
 #define FLAG_HIDE_HO_OH                                             0x321
@@ -908,8 +908,8 @@
 #define FLAG_VISITED_KANTO                                          0x359
 #define FLAG_RECEIVED_ODD_EGG                                       0x35A
 #define FLAG_HIDE_CERULEAN_GYM_POKEMON                                          0x35B
-#define FLAG_HIDE_NEWBARKTOWN_LAB_AIDE                                          0x35C
-#define FLAG_HIDE_AZALEA_TOWN_CUT_MASTER                                          0x35D
+#define FLAG_HIDE_NEWBARKTOWN_LAB_AIDE                              0x35C
+#define FLAG_HIDE_AZALEA_TOWN_CUT_MASTER                            0x35D
 #define FLAG_UNUSED_UNSET6                                          0x35E
 #define FLAG_UNUSED_UNSET7                                          0x35F
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_1           0x360

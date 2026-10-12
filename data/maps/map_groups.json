@@ -435,7 +435,6 @@
     "VictoryRoadKanto_B1F",
     "VictoryRoadKanto_1F",
     "ViridianForest",
-    "MtMoon_Cave",
     "MtMoon_Outside",
     "RockTunnel_B1F",
     "RockTunnel_1F",
@@ -445,10 +444,6 @@
     "DiglettsCave_EntranceNorth",
     "DiglettsCave_EntranceSouth",
     "DiglettsCave_Tunnel",
-    "SeafoamIslands_1F",
-    "SeafoamIslands_Gym",
-    "SeafoamIslands_B1F",
-    "SeafoamIslands_SecretCave",
     "MtSilver_Outside",
     "MtSilver_1F_ItemRoom",
     "MtSilver_1F_WaterfallRoom",
@@ -498,7 +493,12 @@
     "SafariZone2",
     "SafariZone3",
     "SafariZoneIndoor",
-    "Saffron_Temp"
+    "Saffron_Temp",
+    "MtMoon_Cave",
+    "SeafoamIslands_1F",
+    "SeafoamIslands_Gym",
+    "SeafoamIslands_B1F",
+    "SeafoamIslands_SecretCave"
   ],
   "gMapGroup_Emerald1": [
     "InsideOfTruck",

@@ -18696,56 +18696,6 @@ Graveler
 Level: 27
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_TRENT_4 ===
-Name: Trent
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Geodude
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Graveler
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Graveler
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Graveler
-Level: 30
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_TRENT_5 ===
-Name: Trent
-Class: Hiker
-Pic: Hiker
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Graveler
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Graveler
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Graveler
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Golem
-Level: 33
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
 === TRAINER_TYRA_AND_IVY ===
 Name: Tyra
 Class: Sr And Jr
@@ -19654,3 +19604,69 @@ Hariyama
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
+
+=== TRAINER_LANCE_DRAGONS_DEN ===
+Name: Lance
+Class: Champion
+Pic: Champion Lance
+Gender: Male
+Music: HG Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Gyarados (M)
+Level: 68
+Ability: Intimidate
+- Thunder Wave
+- Ice Fang
+- Waterfall
+- Dragon Dance
+
+Charizard (M)
+Level: 68
+Ability: Blaze
+- Flamethrower
+- Air Slash
+- Dragon Claw
+- Hyper Beam
+
+Dragonite (M)
+Level: 75
+Ability: Inner Focus
+- Fire Punch
+- Safeguard
+- Draco Meteor
+- Hyper Beam
+
+=== TRAINER_CLAIR_DRAGONS_DEN ===
+Name: Clair
+Class: Leader
+Pic: Leader Clair
+Gender: Female
+Music: HG Boy 1
+Double Battle: No
+AI: Basic Trainer
+
+Dragonair (F)
+Level: 52
+Ability: Shed Skin
+- Thunder Wave
+- Dragon Rush
+- Thunderbolt
+- Flamethrower
+
+Kingdra (F)
+Level: 56
+Ability: Swift Swim
+- Yawn
+- Hydro Pump
+- Ice Beam
+- Dragonbreath
+
+Dragonite (F)
+Level: 60
+Ability: Inner Focus
+- Thunder
+- Protect
+- Dragonbreath
+- Hyper Beam

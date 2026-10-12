@@ -431,9 +431,10 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_SILVER_DRAGONS_DEN_MULTI",
       "graphics_id": "OBJ_EVENT_GFX_SILVER",
       "x": 26,
-      "y": 40,
+      "y": 43,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -444,9 +445,10 @@
       "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER"
     },
     {
+      "local_id": "LOCALID_LANCE_DRAGONS_DEN_MULTI",
       "graphics_id": "OBJ_EVENT_GFX_LANCE",
       "x": 31,
-      "y": 34,
+      "y": 35,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -468,6 +470,20 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "DragonsDen_EventScript_ClairRematch",
       "flag": "FLAG_HIDE_DEN_CLAIR"
+    },
+    {
+      "local_id": "LOCALID_CLAIR_DRAGONS_DEN_MULTI",
+      "graphics_id": "OBJ_EVENT_GFX_CLAIR",
+      "x": 31,
+      "y": 34,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR_MULTI"
     }
   ],
   "warp_events": [
@@ -513,6 +529,33 @@
       "var": "VAR_BLACKTHORN_CITY_STATE",
       "var_value": "3",
       "script": "DragonsDen_Cavern_Trigger_ClairRight"
+    },
+    {
+      "type": "trigger",
+      "x": 26,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_SILVER_POSTGAME_STATE",
+      "var_value": "1",
+      "script": "DragonsDen_Cavern_Trigger_MultiBattle_Left"
+    },
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_SILVER_POSTGAME_STATE",
+      "var_value": "1",
+      "script": "DragonsDen_Cavern_Trigger_MultiBattle_Mid"
+    },
+    {
+      "type": "trigger",
+      "x": 28,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_SILVER_POSTGAME_STATE",
+      "var_value": "1",
+      "script": "DragonsDen_Cavern_Trigger_MultiBattle_Right"
     }
   ],
   "bg_events": [

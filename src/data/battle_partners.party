@@ -42,3 +42,100 @@ EVs: 252 Atk / 252 SpD / 6 Spe
 - Wing Attack
 - Double Team
 - Steel Wing
+
+=== PARTNER_SILVER_TOTODILE ===
+Name: {RIVAL}
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Feraligatr (M)
+Level: 60
+Ability: Torrent
+- Ice Fang
+- Slash
+- Aqua Tail
+- Crunch
+
+Crobat (M)
+Level: 58
+Ability: Inner Focus
+- Air Cutter
+- Bite
+- Confuse Ray
+- Toxic
+
+Gengar (M)
+Level: 56
+Ability: Levitate
+- Dark Pulse
+- Confuse Ray
+- Sludge Bomb
+- Shadow Ball
+
+=== PARTNER_SILVER_CHIKORITA ===
+Name: {RIVAL}
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+
+Meganium (M)
+Level: 60
+Ability: Overgrow
+- Synthesis
+- Body Slam
+- Petal Dance
+- Light Screen
+
+Crobat (M)
+Level: 58
+Ability: Inner Focus
+- Air Cutter
+- Bite
+- Confuse Ray
+- Toxic
+
+Gengar (M)
+Level: 56
+Ability: Levitate
+- Dark Pulse
+- Confuse Ray
+- Sludge Bomb
+- Shadow Ball
+
+=== PARTNER_SILVER_CYNDAQUIL ===
+Name: {RIVAL}
+Class: Rival
+Pic: Wally
+Gender: Male
+Music: Male
+AI: Basic Trainer
+
+Typhlosion (M)
+Level: 60
+Ability: Blaze
+- Flamethrower
+- Rollout
+- Will-O-Wisp
+- Swift
+
+Crobat (M)
+Level: 58
+Ability: Inner Focus
+- Air Cutter
+- Bite
+- Confuse Ray
+- Toxic
+
+Gengar (M)
+Level: 56
+Ability: Levitate
+- Dark Pulse
+- Confuse Ray
+- Sludge Bomb
+- Shadow Ball

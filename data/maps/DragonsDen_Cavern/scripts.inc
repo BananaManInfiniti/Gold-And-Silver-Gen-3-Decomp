@@ -78,6 +78,131 @@ DragonsDen_Cavern_Trigger_ClairRight::
 	release
 	end
 
+DragonsDen_Cavern_Trigger_MultiBattle_Left::
+	setvar VAR_TEMP_1, 0
+	goto DragonsDen_Cavern_EventScript_MultiBattle
+
+DragonsDen_Cavern_Trigger_MultiBattle_Mid::
+	setvar VAR_TEMP_1, 1
+	goto DragonsDen_Cavern_EventScript_MultiBattle
+
+DragonsDen_Cavern_Trigger_MultiBattle_Right::
+	setvar VAR_TEMP_1, 2
+	goto DragonsDen_Cavern_EventScript_MultiBattle
+
+DragonsDen_Cavern_EventScript_MultiBattle::
+	playse SE_PIN
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_FaceUp
+	waitmovement 0
+	delay 60
+	playbgm MUS_HG_ENCOUNTER_RIVAL, FALSE
+	call_if_eq VAR_TEMP_1, 0, DragonsDen_Cavern_EventScript_PlayerWalksToSilverL
+	call_if_eq VAR_TEMP_1, 1, DragonsDen_Cavern_EventScript_PlayerWalksToSilverM
+	call_if_eq VAR_TEMP_1, 2, DragonsDen_Cavern_EventScript_PlayerWalksToSilverR
+	msgbox DragonsDen_Cavern_Text_SilverBefore, MSGBOX_AUTOCLOSE
+	fadeoutbgm 0
+	playbgm MUS_HG_DRAGONS_DEN, FALSE
+	playse SE_PIN
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_ExclamationMark
+	waitmovement 0
+	playse SE_PIN
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	waitmovement 0
+	clearflag FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE
+	clearflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR_MULTI
+	addobject LOCALID_LANCE_DRAGONS_DEN_MULTI
+	addobject LOCALID_CLAIR_DRAGONS_DEN_MULTI
+	applymovement LOCALID_LANCE_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_LanceWalksToSilver
+	applymovement LOCALID_CLAIR_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_ClairWalksToSilver
+	applymovement OBJ_EVENT_ID_PLAYER, DragonsDen_Cavern_Movement_PlayerMovesForMultiBattle
+	waitmovement 0
+	delay 20
+	msgbox DragonsDen_Cavern_Text_LancePreBattle1, MSGBOX_AUTOCLOSE
+	playse SE_PIN
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_ExclamationMark
+	waitmovement 0
+	msgbox DragonsDen_Cavern_Text_Silver_WhereHaveYouBeenAllThisTime, MSGBOX_AUTOCLOSE
+	msgbox DragonsDen_Cavern_Text_LanceCalmDown, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox DragonsDen_Cavern_Text_Silver_YouCantBeatMeOneOnOne, MSGBOX_AUTOCLOSE
+	msgbox DragonsDen_Cavern_Text_LanceADoubleBattleIsReallyNotBad, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_CLAIR_DRAGONS_DEN_MULTI, Common_Movement_WalkDown
+	waitmovement 0
+	msgbox DragonsDen_Cavern_Text_ClairYouThereWantToBattle, MSGBOX_AUTOCLOSE
+	msgbox DragonsDen_Cavern_Text_SilverYouMustBeKidding, MSGBOX_DEFAULT
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_SilverPushesClair
+	applymovement LOCALID_CLAIR_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_ClairBacksUpFromSilver
+	waitmovement 0
+	delay 20
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_SilverTurnsToPlayer
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox DragonsDen_Cavern_Text_SilverNoWayICanBattleWithHer, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement LOCALID_CLAIR_DRAGONS_DEN_MULTI, Common_Movement_WalkDown
+	waitmovement 0
+	call_if_eq VAR_STARTER_MON, 0, DragonsDen_Cavern_MultiBattle_Cyndaquil
+	call_if_eq VAR_STARTER_MON, 1, DragonsDen_Cavern_MultiBattle_Totodile
+	call_if_eq VAR_STARTER_MON, 2, DragonsDen_Cavern_MultiBattle_Chikorita
+	release
+	end
+
+DragonsDen_Cavern_MultiBattle_Cyndaquil::
+	multi_fixed_2_vs_2 TRAINER_CLAIR_DRAGONS_DEN, DragonsDen_Cavern_MultiBattleClairLoss, TRAINER_LANCE_DRAGONS_DEN, DragonsDen_Cavern_MultiBattleLanceLoss, PARTNER_SILVER_CYNDAQUIL
+	goto DragonsDen_Cavern_MultiBattle_PostBattle
+
+DragonsDen_Cavern_MultiBattle_Totodile::
+	multi_fixed_2_vs_2 TRAINER_CLAIR_DRAGONS_DEN, DragonsDen_Cavern_MultiBattleClairLoss, TRAINER_LANCE_DRAGONS_DEN, DragonsDen_Cavern_MultiBattleLanceLoss, PARTNER_SILVER_TOTODILE
+	goto DragonsDen_Cavern_MultiBattle_PostBattle
+
+DragonsDen_Cavern_MultiBattle_Chikorita::
+	multi_fixed_2_vs_2 TRAINER_CLAIR_DRAGONS_DEN, DragonsDen_Cavern_MultiBattleClairLoss, TRAINER_LANCE_DRAGONS_DEN, DragonsDen_Cavern_MultiBattleLanceLoss, PARTNER_SILVER_CHIKORITA
+	goto DragonsDen_Cavern_MultiBattle_PostBattle
+
+DragonsDen_Cavern_MultiBattle_PostBattle::
+	msgbox DragonsDen_Cavern_Text_LanceJustAsIExpected, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_LANCE_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_Multi_LanceLeaves
+	waitmovement 0
+	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_LANCE
+	removeobject LOCALID_LANCE_DRAGONS_DEN_MULTI
+	msgbox DragonsDen_Cavern_Text_ClairIMustExcuseMyself, MSGBOX_AUTOCLOSE
+	applymovement LOCALID_CLAIR_DRAGONS_DEN_MULTI, DragonsDen_Cavern_Movement_Multi_ClairLeaves
+	waitmovement 0
+	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_CLAIR_MULTI
+	removeobject LOCALID_CLAIR_DRAGONS_DEN_MULTI
+	applymovement LOCALID_SILVER_DRAGONS_DEN_MULTI, Common_Movement_FaceRight
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	waitmovement 0
+	msgbox DragonsDen_Cavern_Text_SilverItWasntSupposedToGoThisWay, MSGBOX_AUTOCLOSE
+	fadescreen FADE_TO_BLACK
+	removeobject LOCALID_SILVER_DRAGONS_DEN_MULTI
+	setflag FLAG_HIDE_DRAGONS_DEN_CAVERN_SILVER
+	fadescreen FADE_FROM_BLACK
+	setvar VAR_SILVER_POSTGAME_STATE, 2
+	release
+	end
+
+DragonsDen_Cavern_EventScript_PlayerWalksToSilverL::
+	applymovement OBJ_EVENT_ID_PLAYER, DragonsDen_Cavern_Movement_PlayerWalksToSilverL
+	waitmovement 0
+	return
+
+DragonsDen_Cavern_EventScript_PlayerWalksToSilverM::
+	applymovement OBJ_EVENT_ID_PLAYER, DragonsDen_Cavern_Movement_PlayerWalksToSilverM
+	waitmovement 0
+	return
+
+DragonsDen_Cavern_EventScript_PlayerWalksToSilverR::
+	applymovement OBJ_EVENT_ID_PLAYER, DragonsDen_Cavern_Movement_PlayerWalksToSilverR
+	waitmovement 0
+	return
 
 DragonsDen_Cavern_EventScript_Clair::
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_WEST
@@ -260,3 +385,185 @@ DragonsDen_Cavern_Text_TwinsLeaandPia2Beaten:
 DragonsDen_Cavern_Text_TwinsLeaandPia2After:
     .string "We'll tell on you.\p"
     .string "MASTER will be angry with you.$"
+
+DragonsDen_Cavern_Text_SilverBefore:
+	.string "Silver: …What?\n"
+	.string "Are you here to make fun of\l"
+	.string "my training?\p"
+	.string "Humph!\n"
+	.string "I took my time coming all the way here,\l"
+	.string "but the Master won't tell me anything,\l"
+	.string "and he's making a big deal out of it…\p"
+	.string "So I decided to train my Pokémon\n"
+	.string "here instead.$"
+
+DragonsDen_Cavern_Text_LancePreBattle1:
+	.string "Lance: Hi, {PLAYER}!\n"
+	.string "And… you.\l"
+	.string "We met at the Team Rocket hideout.$"
+
+DragonsDen_Cavern_Text_Silver_WhereHaveYouBeenAllThisTime:
+	.string "{RIVAL}: You!\n"
+	.string "Where have you been all this time?\p"
+	.string "Prepare to lose to me this time.\n"
+	.string "I challenge you!$"
+
+DragonsDen_Cavern_Text_LanceCalmDown:
+	.string "Lance: Calm down.\n"
+	.string "I was in a bit of a hurry then.\p"
+	.string "Sorry for that.\n"
+	.string "But… I always welcome challengers!\p"
+	.string "Hey!\n"
+	.string "How about a Double Battle?$"
+
+DragonsDen_Cavern_Text_Silver_YouCantBeatMeOneOnOne:
+	.string "Humph!\n"
+	.string "You can't beat me one-on-one, can you?$"
+
+DragonsDen_Cavern_Text_LanceADoubleBattleIsReallyNotBad:
+	.string "Lance: Come on.\n"
+	.string "A Double Battle is really not bad.\p"
+	.string "{PLAYER}, you'll be on my side!$"
+
+DragonsDen_Cavern_Text_ClairYouThereWantToBattle:
+	.string "Clair: Well then, you over there!\n"
+	.string "Will you team up with me?$"
+
+DragonsDen_Cavern_Text_SilverYouMustBeKidding:
+	.string "{RIVAL}: You must be kidding!\p"
+	.string "That embarrassing one in the weird\n"
+	.string "costume for me?$"
+
+DragonsDen_Cavern_Text_SilverNoWayICanBattleWithHer:
+	.string "No way I can battle with her!\p"
+	.string "{PLAYER}! Come to my side!\n"
+	.string "We'll beat Lance together!$"
+
+DragonsDen_Cavern_MultiBattleClairLoss:
+	.string "Oh, I see…$"
+
+DragonsDen_Cavern_MultiBattleLanceLoss:
+	.string "Did you see that, Clair?$"
+
+DragonsDen_Cavern_Text_LanceJustAsIExpected:
+	.string "Lance: Just as I expected.\n"
+	.string "You two make quite a team…\p"
+	.string "Going solo is certainly one way to aim\n"
+	.string "for the top…\p"
+	.string "But that's not all there is to Pokémon\n"
+	.string "battle. Although I don't feel it's\l"
+	.string "necessary to remind you guys.\p"
+	.string "See you, {PLAYER},\n"
+	.string "another time!$"
+
+DragonsDen_Cavern_Text_ClairIMustExcuseMyself:
+	.string "Clair: I must excuse myself.\p"
+	.string "…{PLAYER}, it was a fun battle.\p"
+	.string "That goes for you, too, wise guy.$"
+
+DragonsDen_Cavern_Text_SilverItWasntSupposedToGoThisWay:
+	.string "{RIVAL}: {PLAYER}…\p"
+	.string "It wasn't supposed to go this way…\n"
+	.string "Anyway, I am not giving up beating you!\p"
+	.string "I'll train my Pokémon and… my own\n"
+	.string "heart, too.\p"
+	.string "I'll come back as the toughest\n"
+	.string "challenge for you!$"
+
+DragonsDen_Cavern_Movement_PlayerWalksToSilverL:
+	walk_down
+	step_end
+
+DragonsDen_Cavern_Movement_PlayerWalksToSilverM:
+	walk_left
+	walk_down
+	step_end
+
+DragonsDen_Cavern_Movement_PlayerWalksToSilverR:
+	walk_left
+	walk_left
+	walk_down
+	step_end
+
+DragonsDen_Cavern_Movement_LanceWalksToSilver:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+DragonsDen_Cavern_Movement_ClairWalksToSilver:
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+DragonsDen_Cavern_Movement_PlayerMovesForMultiBattle:
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	delay_16
+	walk_right
+	walk_down
+	face_up
+	step_end
+
+DragonsDen_Cavern_Movement_SilverPushesClair:
+	walk_up
+	step_end
+
+DragonsDen_Cavern_Movement_ClairBacksUpFromSilver:
+	walk_faster_up
+	walk_faster_up
+	face_down
+	step_end
+
+DragonsDen_Cavern_Movement_SilverTurnsToPlayer:
+	walk_down
+	walk_in_place_faster_right
+	step_end
+
+DragonsDen_Cavern_Movement_Multi_LanceLeaves:
+	walk_up
+	walk_up
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_up
+	walk_up
+	walk_up
+	step_end
+
+DragonsDen_Cavern_Movement_Multi_ClairLeaves:
+	slide_up
+	slide_up
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	step_end

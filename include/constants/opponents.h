@@ -642,8 +642,8 @@
 #define TRAINER_MIKE_2                      635
 #define TRAINER_TRENT_2                     636
 #define TRAINER_TRENT_3                     637
-#define TRAINER_TRENT_4                     638
-#define TRAINER_TRENT_5                     639
+#define TRAINER_CLAIR_DRAGONS_DEN           638
+#define TRAINER_LANCE_DRAGONS_DEN           639
 #define TRAINER_DEZ_AND_LUKE                640
 #define TRAINER_LEA_AND_JED                 641
 #define TRAINER_KIRA_AND_DAN_1              642
